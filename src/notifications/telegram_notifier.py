@@ -142,3 +142,22 @@ Seeker TC has been freed for next search.
 <b>Status:</b> Please check manually
 """
         await self.send_notification(message)
+
+    async def ask_which_test_section(self, test_sections: List[str]):
+        """
+        Ask user which test section to use
+
+        Args:
+            test_sections: List of test section names
+        """
+        section_list = "\n".join([f"{i+1}. {name}" for i, name in enumerate(test_sections)])
+
+        message = f"""
+<b>Multiple test sections found</b>
+
+Which test section should I use?
+{section_list}
+
+Reply with the number (1, 2, etc.)
+"""
+        await self.send_notification(message)

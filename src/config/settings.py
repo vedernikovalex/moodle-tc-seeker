@@ -29,6 +29,7 @@ class SeekerConfig(BaseModel):
 class TargetTC(BaseModel):
     name: str
     url: str
+    test_name: Optional[str] = None  # Specific test section name (if TC has multiple tests)
 
 
 class Settings(BaseSettings):

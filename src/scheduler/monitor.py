@@ -51,10 +51,123 @@ class TCMonitor:
             settings.telegram_chat_id
         )
 
+        # Check if seeker already has a slot on startup (in case bot was restarted)
+        if self.settings.seeker:
+            self._check_existing_seeker_registration()
+
     def _authenticate(self):
         """Authenticate with Moodle"""
         self.authenticator.login(self.settings.moodle_username, self.settings.moodle_password)
         SessionManager.save_session(self.authenticator.session, self.settings.session_cache_file)
+
+    def _check_existing_seeker_registration(self):
+        """Check if seeker already has a registration on startup (resume transfer if needed)"""
+        try:
+            logger.info("Checking for existing seeker registration on startup...")
+            soup = self.parser.fetch_tc_page(self.settings.seeker.tc_url)
+            reserved = self.parser.get_reserved_slots_for_test(soup, self.settings.seeker.test_name)
+
+            if reserved:
+                slot = reserved[0]
+                # Convert date format from DD.MM.YYYY to YYYY-MM-DD
+                from datetime import datetime
+                date_obj = datetime.strptime(slot['date'], '%d.%m.%Y')
+                slot_date_iso = date_obj.strftime('%Y-%m-%d')
+
+                logger.warning(f"Found existing seeker registration: {slot['date']} {slot['time']}")
+
+                # Set as currently holding
+                self.currently_holding_slot = {
+                    'date': slot_date_iso,
+                    'time': slot['time'],
+                    'register_url': ''  # Not needed for transfer
+                }
+
+                # Trigger transfer workflow immediately
+                logger.info("Resuming transfer workflow...")
+                asyncio.create_task(self._resume_transfer_on_startup(self.currently_holding_slot))
+
+        except Exception as e:
+            logger.error(f"Error checking existing seeker registration: {e}")
+
+    async def _ask_for_test_section(self, target_tc_url: str) -> str:
+        """
+        Ask user which test section to use when target TC has multiple sections
+
+        Args:
+            target_tc_url: URL of target TC
+
+        Returns:
+            Selected test section name
+        """
+        try:
+            logger.info(f"Fetching target TC to check test sections: {target_tc_url}")
+
+            # Fetch target TC page
+            target_soup = self.parser.fetch_tc_page(target_tc_url)
+
+            # Extract test sections
+            test_sections = self.transfer._extract_test_sections(target_soup)
+
+            if len(test_sections) == 0:
+                logger.warning("No test sections found on target TC")
+                return None
+            elif len(test_sections) == 1:
+                logger.info(f"Only one test section found: {test_sections[0]}")
+                return test_sections[0]
+            else:
+                # Multiple test sections - ask user
+                logger.info(f"Found {len(test_sections)} test sections, asking user")
+
+                # CRITICAL: Set pending_response BEFORE sending notification to avoid race condition
+                self.listener.pending_response = "test_section"
+                await self.notifier.ask_which_test_section(test_sections)
+
+                # Wait for response (pending_response already set above)
+                response = await self.listener.wait_for_test_section_response(timeout=300)
+
+                # Parse response (should be a number)
+                try:
+                    choice_idx = int(response.strip()) - 1
+                    if 0 <= choice_idx < len(test_sections):
+                        selected = test_sections[choice_idx]
+                        logger.info(f"User selected test section #{choice_idx + 1}: {selected}")
+                        return selected
+                    else:
+                        logger.error(f"Invalid choice {response} - must be between 1 and {len(test_sections)}")
+                        await self.notifier.notify_error(f"Invalid choice {response} - must be between 1 and {len(test_sections)}")
+                        return None
+                except ValueError:
+                    logger.error(f"Could not parse choice '{response}' as number")
+                    await self.notifier.notify_error(f"Invalid response '{response}', expected a number (1, 2, 3...)")
+                    return None
+
+        except Exception as e:
+            logger.error(f"Error asking for test section: {e}")
+            return None
+
+    async def _resume_transfer_on_startup(self, slot: Dict):
+        """Resume transfer workflow after bot restart"""
+        try:
+            # Wait a moment for Telegram listener to start
+            await asyncio.sleep(2)
+
+            # CRITICAL: Set pending_response BEFORE sending notification to avoid race condition
+            self.listener.pending_response = "target_tc"
+
+            # Ask user for target TC
+            target_tc_names = [tc.name for tc in self.settings.target_tcs]
+            await self.notifier.notify_slot_found_and_booked(
+                self.settings.seeker.test_name,
+                slot,
+                target_tc_names
+            )
+
+            # Handle transfer
+            await self.handle_slot_transfer(slot)
+
+        except Exception as e:
+            logger.error(f"Error resuming transfer on startup: {e}")
 
     def start(self):
         """Start monitoring seeker TC"""
@@ -239,6 +352,9 @@ class TCMonitor:
                     self.currently_holding_slot = slot
                     logger.success(f"Booked slot in seeker TC: {slot['date']} {slot['time']}")
 
+                    # CRITICAL: Set pending_response BEFORE sending notification to avoid race condition
+                    self.listener.pending_response = "target_tc"
+
                     # Ask user for target TC
                     target_tc_names = [tc.name for tc in self.settings.target_tcs]
                     await self.notifier.notify_slot_found_and_booked(
@@ -282,11 +398,22 @@ class TCMonitor:
 
             target_tc_url = self.listener.parse_target_tc(response, self.settings.target_tcs)
 
-            # Find target TC name for logging
-            target_tc_name = next(
-                (tc.name for tc in self.settings.target_tcs if tc.url == target_tc_url),
-                target_tc_url
+            # Find target TC object for name and test_name
+            target_tc = next(
+                (tc for tc in self.settings.target_tcs if tc.url == target_tc_url),
+                None
             )
+
+            target_tc_name = target_tc.name if target_tc else target_tc_url
+            target_test_name = target_tc.test_name if target_tc else None
+
+            # If test_name not configured, ask user interactively
+            if target_test_name is None:
+                target_test_name = await self._ask_for_test_section(target_tc_url)
+                if target_test_name is None:
+                    await self.notifier.notify_error("Could not determine test section for target TC")
+                    logger.error("Test section selection failed or returned None")
+                    return
 
             await self.notifier.notify_transfer_started(target_tc_name)
 
@@ -296,7 +423,8 @@ class TCMonitor:
                 seeker_test_name=self.settings.seeker.test_name,
                 target_tc_url=target_tc_url,
                 slot_date=slot['date'],
-                slot_time=slot['time']
+                slot_time=slot['time'],
+                target_test_name=target_test_name
             )
 
             if success:

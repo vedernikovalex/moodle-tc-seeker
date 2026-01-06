@@ -80,6 +80,12 @@ class TelegramListener:
                     'value': message_text
                 })
                 logger.debug("Queued target TC response")
+            elif self.pending_response == "test_section":
+                await self.response_queue.put({
+                    'type': 'test_section',
+                    'value': message_text
+                })
+                logger.debug("Queued test section response")
             else:
                 logger.debug("No pending response expected, ignoring message")
 
@@ -112,6 +118,37 @@ class TelegramListener:
 
         except asyncio.TimeoutError:
             logger.warning("Timeout waiting for target TC response")
+            raise
+
+        finally:
+            self.pending_response = None
+
+    async def wait_for_test_section_response(self, timeout: int = 300) -> str:
+        """
+        Wait for user to reply with test section choice
+
+        Args:
+            timeout: Timeout in seconds (default 5 minutes)
+
+        Returns:
+            Test section choice from user response
+
+        Raises:
+            asyncio.TimeoutError if no response within timeout
+        """
+        self.pending_response = "test_section"
+        logger.info(f"Waiting for test section response (timeout: {timeout}s)")
+
+        try:
+            response = await asyncio.wait_for(
+                self.response_queue.get(),
+                timeout=timeout
+            )
+            logger.info(f"Received test section response: {response['value']}")
+            return response['value']
+
+        except asyncio.TimeoutError:
+            logger.warning("Timeout waiting for test section response")
             raise
 
         finally:

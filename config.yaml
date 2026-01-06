@@ -3,10 +3,10 @@ seeker:
   test_name: "Zápočtový test"
   check_interval: 60
   date_range:
-    start: "2026-01-08"
-    end: "2026-01-16"
+    start: "2026-01-09"
+    end: "2026-01-09"
   time_range:
-    start: "8:00"
+    start: "10:10"
     end: "18:00"
 
 target_tcs:
