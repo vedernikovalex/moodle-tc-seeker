@@ -1,0 +1,16 @@
+seeker:
+  tc_url: "https://moodle.czu.cz/mod/tcb/view.php?id=776603"
+  test_name: "Zápočtový test"
+  check_interval: 60
+  date_range:
+    start: "2026-01-08"
+    end: "2026-01-16"
+  time_range:
+    start: "8:00"
+    end: "18:00"
+
+target_tcs:
+  - name: "UNIX Exam"
+    url: "https://moodle.czu.cz/mod/tcb/view.php?id=XXXXXX"
+  - name: "Algorithms Exam"
+    url: "https://moodle.czu.cz/mod/tcb/view.php?id=YYYYYY"

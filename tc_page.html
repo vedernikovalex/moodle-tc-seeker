@@ -1,0 +1,3840 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="cs" xml:lang="cs">
+ <head>
+  <title>
+   Testovací centrum - Zápočet | Moodle ČZU
+  </title>
+  <link href="https://moodle.czu.cz/pluginfile.php/1/core_admin/favicon/64x64/1765212079/CZU_moodle4_favicon.png" rel="shortcut icon"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="moodle, Testovací centrum - Zápočet | Moodle ČZU" name="keywords"/>
+  <link href="https://moodle.czu.cz/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" rel="stylesheet" type="text/css"/>
+  <script id="firstthemesheet" type="text/css">
+   /** Required in order to fix style inclusion problems in IE with YUI **/
+  </script>
+  <link href="https://moodle.czu.cz/theme/styles.php/adaptable/1765212079_1/all" rel="stylesheet" type="text/css"/>
+  <script>
+   //<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.czu.cz","apibase":"https:\/\/moodle.czu.cz\/r.php\/api","homeurl":{},"sesskey":"xNkFVUo7j6","sessiontimeout":"28800","sessiontimeoutwarning":"1200","themerev":"1765212079","slasharguments":1,"theme":"adaptable","iconsystemmodule":"theme_adaptable\/icon_system_fontawesome","jsrev":"1765212079","admin":"admin","svgicons":true,"usertimezone":"Evropa\/Praha","language":"cs","courseId":10875,"courseContextId":1066736,"contextid":1169849,"contextInstanceId":776603,"langrev":1766977623,"templaterev":"1765212079","siteId":1,"userId":106032};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.czu.cz\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/moodle.czu.cz\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.czu.cz\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.czu.cz\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.czu.cz\/theme\/yui_combo.php?m\/1765212079\/","combine":true,"comboBase":"https:\/\/moodle.czu.cz\/theme\/yui_combo.php?","ext":false,"root":"m\/1765212079\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_ipaddress-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bsgrid-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_corrections-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_count-button":{"requires":["io","json-parse","moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fontfamily-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_hr-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_htmlplus-beautify":{},"moodle-atto_htmlplus-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_htmlplus-beautify","moodle-atto_htmlplus-codemirror","event-valuechange"]},"moodle-atto_htmlplus-codemirror":{"requires":["moodle-atto_htmlplus-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_justify-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_matrix-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_teamsmeeting-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.czu.cz\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.czu.cz\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1765212079\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.czu.cz\/lib\/javascript.php\/1765212079\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.czu.cz\/lib\/javascript.php\/1765212079\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+  </script>
+  <meta content="d05cf5876dcefdf07feb46eca0a4d3b1" name="moodle-validation"/>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85291716-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary"/>
+  <meta name="twitter:site" value="Moodle - Česká zemědělská univerzita v Praze"/>
+  <meta name="twitter:title" value="Testovací centrum - Zápočet | Moodle ČZU"/>
+  <!-- Open Graph data -->
+  <meta content="Testovací centrum - Zápočet | Moodle ČZU" property="og:title"/>
+  <meta content="website" property="og:type"/>
+  <meta content="" property="og:url"/>
+  <meta name="og:site_name" value="Moodle - Česká zemědělská univerzita v Praze"/>
+  <!-- Chrome, Firefox OS and Opera on Android topbar color -->
+  <meta content="#fff" name="theme-color"/>
+  <!-- Windows Phone topbar color -->
+  <meta content="#fff" name="msapplication-navbutton-color"/>
+  <!-- iOS Safari topbar color -->
+  <meta content="#fff" name="apple-mobile-web-app-status-bar-style"/>
+  <!-- Load Google main font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class="format-topics path-mod path-mod-tcb chrome dir-ltr lang-cs yui-skin-sam yui3-skin-sam moodle-czu-cz pagelayout-incourse course-10875 context-1169849 cmid-776603 cm-type-tcb category-1878 theme theme_adaptable two-column fullin header-style1 showblockicons standard uses-drawers responsivesectionnav" id="page-mod-tcb-view">
+  <div>
+   <a class="sr-only sr-only-focusable" href="#maincontent">
+    Přejít k hlavnímu obsahu
+   </a>
+  </div>
+  <script src="https://moodle.czu.cz/lib/javascript.php/1765212079/lib/polyfills/polyfill.js">
+  </script>
+  <script src="https://moodle.czu.cz/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js">
+  </script>
+  <script src="https://moodle.czu.cz/lib/javascript.php/1765212079/lib/javascript-static.js">
+  </script>
+  <script>
+   //<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+  </script>
+  <div id="page-wrapper">
+   <div class="drawer drawer-left show d-none d-print-none not-initialized" data-close-on-resize="1" data-forceopen="" data-preference="drawer-open-block" data-region="fixed-drawer" data-state="show-drawer-left" id="theme_adaptable-drawers-sidepost">
+    <div class="drawerheader">
+     <button class="btn drawertoggle icon-no-margin hidden" data-action="closedrawer" data-placement="right" data-target="theme_adaptable-drawers-sidepost" data-toggle="tooltip" data-toggler="drawers" title="Zavřít panel  bloku">
+      <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+      </i>
+     </button>
+     <div class="drawerheadercontent hidden">
+     </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+     <section aria-label="Bloky" class="d-print-none">
+      <aside class="block-region" data-blockregion="side-post" data-droptarget="1" id="block-region-side-post">
+       <h2 class="sr-only">
+        Bloky
+       </h2>
+       <a class="skip skip-block" href="#sb-1" id="fsb-1">
+        Přeskočit: Správa
+       </a>
+       <section aria-labelledby="instance-21-header" class="block_settings block mb-3" data-block="settings" data-instance-id="21" id="inst21" role="navigation">
+        <div class="header">
+         <div class="block-action block-collapsible" data-instance-id="21" id="instance-21-action" title="Show / hide the block">
+         </div>
+         <div class="title">
+          <div class="block_action">
+          </div>
+          <h2 class="d-inline" id="instance-21-header">
+           Správa
+          </h2>
+         </div>
+         <div class="block-controls">
+         </div>
+        </div>
+        <div class="content">
+         <div class="box block_tree_box" id="settingsnav">
+          <ul class="block_tree list" data-ajax-loader="block_navigation/site_admin_loader" role="tree">
+           <li aria-expanded="false" aria-owns="random695c0b023d1412_group" class="type_course depth_1 contains_branch" role="treeitem" tabindex="-1">
+            <p class="tree_item root_node tree_item branch">
+             <span tabindex="0">
+              Správa kurzu
+             </span>
+            </p>
+            <ul aria-hidden="true" id="random695c0b023d1412_group" role="group">
+             <li class="type_setting depth_2 item_with_icon" role="treeitem" tabindex="-1">
+              <p class="tree_item hasicon tree_item leaf">
+               <a class="" data-download-body="Chystáte se stáhnout soubor ZIP s obsahem kurzu (kromě položek, které nelze stáhnout, a souborů větších než 50.0 MB)." data-download-button-text="Stáhnout" data-download-link="https://moodle.czu.cz/course/downloadcontent.php?contextid=1066736&amp;download=1" data-download-title="Stáhnout obsah kurzu" data-downloadcourse="1" data-overrides-tree-activation-key-handler="1" href="https://moodle.czu.cz/course/downloadcontent.php?contextid=1066736" id="action_link695c0b023d1411">
+                <i aria-hidden="true" class="afaicon fas fa-download navicon fa-fw">
+                </i>
+                Stáhnout obsah kurzu
+               </a>
+              </p>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </section>
+       <span class="skip-block-to" id="sb-1">
+       </span>
+       <a class="skip skip-block" href="#sb-2" id="fsb-2">
+        Přeskočit: Navigace
+       </a>
+       <section aria-labelledby="instance-20-header" class="block_navigation block mb-3" data-block="navigation" data-instance-id="20" id="inst20" role="navigation">
+        <div class="header">
+         <div class="block-action block-collapsible" data-instance-id="20" id="instance-20-action" title="Show / hide the block">
+         </div>
+         <div class="title">
+          <div class="block_action">
+          </div>
+          <h2 class="d-inline" id="instance-20-header">
+           Navigace
+          </h2>
+         </div>
+         <div class="block-controls">
+         </div>
+        </div>
+        <div class="content">
+         <ul class="block_tree list" data-ajax-loader="block_navigation/nav_loader" role="tree">
+          <li aria-expanded="true" aria-labelledby="random695c0b023d1414_label_1_1" aria-owns="random695c0b023d1415_group" class="type_unknown depth_1 contains_branch" data-collapsible="false" role="treeitem">
+           <p class="tree_item branch navigation_node">
+            <a href="https://moodle.czu.cz/" id="random695c0b023d1414_label_1_1" tabindex="-1">
+             Titulní stránka
+            </a>
+           </p>
+           <ul id="random695c0b023d1415_group" role="group">
+            <li aria-labelledby="random695c0b023d1416_label_2_2" class="type_setting depth_2 item_with_icon" role="treeitem">
+             <p class="tree_item hasicon">
+              <a href="https://moodle.czu.cz/my/" id="random695c0b023d1416_label_2_2" tabindex="-1">
+               <i aria-hidden="true" class="afaicon fas fa-tachometer-alt navicon fa-fw">
+               </i>
+               <span class="item-content-wrap">
+                Nástěnka
+               </span>
+              </a>
+             </p>
+            </li>
+            <li aria-expanded="false" aria-labelledby="random695c0b023d1416_label_2_3" aria-owns="random695c0b023d1418_group" class="type_course depth_2 contains_branch" role="treeitem">
+             <p class="tree_item branch">
+              <span id="random695c0b023d1416_label_2_3" tabindex="-1" title="Moodle - Česká zemědělská univerzita v Praze">
+               Hlavní nabídka
+              </span>
+             </p>
+             <ul aria-hidden="true" id="random695c0b023d1418_group" role="group">
+              <li aria-labelledby="random695c0b023d1419_label_3_5" class="type_custom depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/my/courses.php" id="random695c0b023d1419_label_3_5" tabindex="-1">
+                 <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                 </i>
+                 <span class="item-content-wrap">
+                  Moje kurzy
+                 </span>
+                </a>
+               </p>
+              </li>
+              <li aria-labelledby="random695c0b023d1419_label_3_6" class="type_unknown depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/blog/index.php" id="random695c0b023d1419_label_3_6" tabindex="-1">
+                 <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                 </i>
+                 <span class="item-content-wrap">
+                  Blogy stránek
+                 </span>
+                </a>
+               </p>
+              </li>
+              <li aria-labelledby="random695c0b023d1419_label_3_7" class="type_custom depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/badges/index.php?type=1" id="random695c0b023d1419_label_3_7" tabindex="-1">
+                 <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                 </i>
+                 <span class="item-content-wrap">
+                  Odznaky stránky
+                 </span>
+                </a>
+               </p>
+              </li>
+              <li aria-labelledby="random695c0b023d1419_label_3_8" class="type_setting depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/tag/search.php" id="random695c0b023d1419_label_3_8" tabindex="-1">
+                 <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                 </i>
+                 <span class="item-content-wrap">
+                  Štítky
+                 </span>
+                </a>
+               </p>
+              </li>
+              <li aria-labelledby="random695c0b023d1419_label_3_18" class="type_activity depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/mod/url/view.php?id=118602" id="random695c0b023d1419_label_3_18" tabindex="-1" title="URL">
+                 <img alt="URL" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/url/1765212079/monologo" title="URL"/>
+                 <span class="item-content-wrap">
+                  Seznam GAELPů (Garantů Elektronické Podpory za jed...
+                 </span>
+                </a>
+               </p>
+              </li>
+             </ul>
+            </li>
+            <li aria-expanded="true" aria-labelledby="random695c0b023d1416_label_2_21" aria-owns="random695c0b023d14115_group" class="type_system depth_2 contains_branch" role="treeitem">
+             <p class="tree_item branch">
+              <a href="https://moodle.czu.cz/my/courses.php" id="random695c0b023d1416_label_2_21" tabindex="-1">
+               Moje kurzy
+              </a>
+             </p>
+             <ul id="random695c0b023d14115_group" role="group">
+              <li aria-labelledby="random695c0b023d14116_label_3_22" class="type_custom depth_3 item_with_icon" role="treeitem">
+               <p class="tree_item hasicon">
+                <a href="https://moodle.czu.cz/my/courses.php" id="random695c0b023d14116_label_3_22" tabindex="-1">
+                 <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                 </i>
+                 <span class="item-content-wrap">
+                  Více...
+                 </span>
+                </a>
+               </p>
+              </li>
+             </ul>
+            </li>
+            <li aria-expanded="true" aria-labelledby="random695c0b023d1416_label_2_23" aria-owns="random695c0b023d14118_group" class="type_system depth_2 contains_branch" role="treeitem">
+             <p class="tree_item branch">
+              <a href="https://moodle.czu.cz/course/index.php" id="random695c0b023d1416_label_2_23" tabindex="-1">
+               Kurzy
+              </a>
+             </p>
+             <ul id="random695c0b023d14118_group" role="group">
+              <li aria-expanded="true" aria-labelledby="random695c0b023d14119_label_3_24" aria-owns="random695c0b023d14120_group" class="type_course depth_3 contains_branch" role="treeitem">
+               <p class="tree_item branch canexpand">
+                <a href="https://moodle.czu.cz/course/view.php?id=10875" id="random695c0b023d14119_label_3_24" tabindex="-1" title="UNIXové operační systémy - INFO5, UNIXové operační systémy - INFO5 komb. - ZS 25/26">
+                 EIE63E, EIE92E
+                </a>
+               </p>
+               <ul id="random695c0b023d14120_group" role="group">
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_25" aria-owns="random695c0b023d14122_group" class="type_container depth_4 contains_branch" role="treeitem">
+                 <p class="tree_item branch">
+                  <a href="https://moodle.czu.cz/user/index.php?id=10875" id="random695c0b023d14121_label_4_25" tabindex="-1">
+                   Účastníci
+                  </a>
+                 </p>
+                 <ul aria-hidden="true" id="random695c0b023d14122_group" role="group">
+                  <li aria-labelledby="random695c0b023d14123_label_5_26" class="type_setting depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/blog/index.php?groupid=35840" id="random695c0b023d14123_label_5_26" tabindex="-1">
+                     <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                     </i>
+                     <span class="item-content-wrap">
+                      Blogy kurzu
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14123_label_5_27" class="type_user depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/user/view.php?id=106032&amp;course=10875" id="random695c0b023d14123_label_5_27" tabindex="-1">
+                     <i aria-hidden="true" class="afaicon anavigationitem fas fa-circle fa-2xs align-middle navicon fa-fw">
+                     </i>
+                     <span class="item-content-wrap">
+                      Vedernikov Alexander
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                 </ul>
+                </li>
+                <li aria-labelledby="random695c0b023d14121_label_4_28" class="type_setting depth_4 item_with_icon" role="treeitem">
+                 <p class="tree_item hasicon">
+                  <a href="https://moodle.czu.cz/grade/report/index.php?id=10875" id="random695c0b023d14121_label_4_28" tabindex="-1">
+                   <i aria-hidden="true" class="afaicon fas fa-table navicon fa-fw">
+                   </i>
+                   <span class="item-content-wrap">
+                    Známky
+                   </span>
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_29" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_156300" data-node-key="156300" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_156300">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156300" id="random695c0b023d14121_label_4_29" tabindex="-1">
+                   01_Informace o předmětu
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_30" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_156301" data-node-key="156301" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_156301">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156301" id="random695c0b023d14121_label_4_30" tabindex="-1">
+                   02_Materiál k přednáškám
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_31" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_156302" data-node-key="156302" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_156302">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156302" id="random695c0b023d14121_label_4_31" tabindex="-1">
+                   03_Materiál ke cvičením
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="true" aria-labelledby="random695c0b023d14121_label_4_32" aria-owns="random695c0b023d14127_group" class="type_structure depth_4 contains_branch" role="treeitem">
+                 <p class="tree_item branch">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156304" id="random695c0b023d14121_label_4_32" tabindex="-1">
+                   04_Testy a kvízy
+                  </a>
+                 </p>
+                 <ul id="random695c0b023d14127_group" role="group">
+                  <li aria-labelledby="random695c0b023d14128_label_5_33" class="type_activity depth_5 item_with_icon current_branch" role="treeitem">
+                   <p class="tree_item hasicon active_tree_node">
+                    <a href="https://moodle.czu.cz/mod/tcb/view.php?id=776603" id="random695c0b023d14128_label_5_33" tabindex="-1" title="Modul Testovací centrum 2">
+                     <img alt="Modul Testovací centrum 2" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/tcb/1765212079/monologo" title="Modul Testovací centrum 2"/>
+                     <span class="item-content-wrap">
+                      Testovací centrum - Zápočet
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_34" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/quiz/view.php?id=703892" id="random695c0b023d14128_label_5_34" tabindex="-1" title="Test">
+                     <img alt="Test" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/quiz/1765212079/monologo" title="Test"/>
+                     <span class="item-content-wrap">
+                      Zápočtový test
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_35" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/tcb/view.php?id=801712" id="random695c0b023d14128_label_5_35" tabindex="-1" title="Modul Testovací centrum 2">
+                     <img alt="Modul Testovací centrum 2" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/tcb/1765212079/monologo" title="Modul Testovací centrum 2"/>
+                     <span class="item-content-wrap">
+                      Testovací centrum - Teoretická zkouška 2025
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_36" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/quiz/view.php?id=801703" id="random695c0b023d14128_label_5_36" tabindex="-1" title="Test">
+                     <img alt="Test" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/quiz/1765212079/monologo" title="Test"/>
+                     <span class="item-content-wrap">
+                      Teoretický zkouškový test ZS 2025
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_37" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/quiz/view.php?id=703901" id="random695c0b023d14128_label_5_37" tabindex="-1" title="Test">
+                     <img alt="Test" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/quiz/1765212079/monologo" title="Test"/>
+                     <span class="item-content-wrap">
+                      Praktický zkouškový test ZS 2025-2026
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_38" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/resource/view.php?id=800830" id="random695c0b023d14128_label_5_38" tabindex="-1" title="Soubor">
+                     <img alt="Soubor" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/core/1765212079/f/pdf" title="Soubor"/>
+                     <span class="item-content-wrap">
+                      2026_Vzorový teoretický zkouškový test
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                  <li aria-labelledby="random695c0b023d14128_label_5_39" class="type_activity depth_5 item_with_icon" role="treeitem">
+                   <p class="tree_item hasicon">
+                    <a href="https://moodle.czu.cz/mod/quiz/view.php?id=703898" id="random695c0b023d14128_label_5_39" tabindex="-1" title="Test">
+                     <img alt="Test" class="icon navicon" src="https://moodle.czu.cz/theme/image.php/adaptable/quiz/1765212079/monologo" title="Test"/>
+                     <span class="item-content-wrap">
+                      Vzorový zkouškový praktický test
+                     </span>
+                    </a>
+                   </p>
+                  </li>
+                 </ul>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_45" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_156303" data-node-key="156303" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_156303">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156303" id="random695c0b023d14121_label_4_45" tabindex="-1">
+                   05_Příprava na zkoušku
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_46" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_156305" data-node-key="156305" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_156305">
+                  <a href="https://moodle.czu.cz/course/section.php?id=156305" id="random695c0b023d14121_label_4_46" tabindex="-1">
+                   06_Ostatní materiály
+                  </a>
+                 </p>
+                </li>
+                <li aria-expanded="false" aria-labelledby="random695c0b023d14121_label_4_47" class="type_structure depth_4 contains_branch" data-loaded="false" data-node-id="expandable_branch_30_178504" data-node-key="178504" data-node-type="30" data-requires-ajax="true" role="treeitem">
+                 <p class="tree_item branch" id="expandable_branch_30_178504">
+                  <a href="https://moodle.czu.cz/course/section.php?id=178504" id="random695c0b023d14121_label_4_47" tabindex="-1">
+                   Publicita
+                  </a>
+                 </p>
+                </li>
+               </ul>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </div>
+       </section>
+       <span class="skip-block-to" id="sb-2">
+       </span>
+      </aside>
+     </section>
+    </div>
+   </div>
+   <header id="adaptable-page-header-wrapper">
+    <div class="above-header" id="header1">
+     <div class="container">
+      <nav class="navbar navbar-expand btco-hover-menu">
+       <button class="navbar-toggler nav-link aabtn d-block d-lg-none px-1 my-1 border-0" data-action="toggle" data-target="theme_adaptable-drawers-primary" data-toggler="drawers">
+        <i aria-hidden="true" class="fa fa-bars afaicon fa-fw">
+        </i>
+        <span class="sr-only">
+         Boční panel
+        </span>
+       </button>
+       <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto my-auto" id="adaptable-user-nav">
+         <li class="nav-item navbarsearchsocial mx-md-1 my-auto d-md-block d-lg-none my-auto">
+          <div class="simplesearchform adsimplesearchform" id="searchinput-navbar-695c0b023f71c695c0b023d14151">
+           <div class="collapse" id="searchform-navbar-695c0b023f71c695c0b023d14151">
+            <form accept-charset="utf-8" action="https://moodle.czu.cz/course/search.php" autocomplete="off" class="mform d-flex flex-wrap align-items-center searchform-navbar" method="get">
+             <input name="context" type="hidden" value="1169849"/>
+             <div class="input-group">
+              <input aria-label="Course search" autocomplete="off" class="form-control withclear" data-region="input" id="searchinput-695c0b023f71c695c0b023d14151" name="q" placeholder="Course search" type="text"/>
+              <label for="searchinput-695c0b023f71c695c0b023d14151">
+               <span class="sr-only">
+                Course search
+               </span>
+              </label>
+              <button class="btn btn-close adsimplesearchclose" data-action="closesearch" data-target="#searchform-navbar-695c0b023f71c695c0b023d14151" data-toggle="collapse" type="button">
+               <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+               </i>
+               <span class="sr-only">
+                Zavřít
+               </span>
+              </button>
+              <button class="btn btn-submit" data-action="submit" type="submit">
+               <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+               </i>
+               <span class="sr-only">
+                Course search
+               </span>
+              </button>
+             </div>
+            </form>
+           </div>
+           <button aria-controls="searchform-navbar-695c0b023f71c695c0b023d14151" aria-expanded="false" class="rounded-0 nav-link icon-no-margin" data-action="opensearch" data-target="#searchform-navbar-695c0b023f71c695c0b023d14151" data-toggle="collapse" title="Přepnout vyhledávání" type="button">
+            <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+            </i>
+            <span class="sr-only">
+             Přepnout vyhledávání
+            </span>
+           </button>
+          </div>
+         </li>
+         <li class="my-auto d-flex" id="nav-popover-container">
+          <div class="popover-region collapsed popover-region-notifications" data-region="popover-region" data-userid="106032" id="nav-notification-popover-container">
+           <div aria-controls="popover-region-container-695c0b023ffb1695c0b023d14153" aria-expanded="false" aria-haspopup="true" aria-label="  Zobrazit okno oznámení  s 15 novými oznámeními  " class="popover-region-toggle nav-link icon-no-margin" data-region="popover-region-toggle" role="button" tabindex="0" title="  Zobrazit okno oznámení  s 15 novými oznámeními  ">
+            <i aria-hidden="true" class="afaicon fas fa-bell fa-fw">
+            </i>
+            <div aria-hidden="true" class="count-container" data-region="count-container">
+             15
+            </div>
+           </div>
+           <div aria-hidden="true" aria-label="Okno oznámení" aria-modal="true" class="popover-region-container" data-region="popover-region-container" id="popover-region-container-695c0b023ffb1695c0b023d14153" role="dialog" tabindex="-1">
+            <div class="popover-region-header-container">
+             <h3 class="popover-region-header-text" data-region="popover-region-header-text">
+              Oznámení
+             </h3>
+             <div class="popover-region-header-actions" data-region="popover-region-header-actions">
+              <a aria-label="Označit vše jako přečtené" class="mark-all-read-button btn btn-sm btn-link m-0 py-0 icon-no-margin" data-action="mark-all-read" href="#" role="button" title="Označit vše jako přečtené">
+               <span class="normal-icon">
+                <i aria-hidden="true" class="afaicon fas fa-check fa-fw">
+                </i>
+               </span>
+               <span class="loading-icon icon-no-margin">
+                <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+                </i>
+               </span>
+               <span aria-live="polite" class="sr-only" data-region="notification-read-feedback">
+               </span>
+              </a>
+              <a aria-label="Nastavení oznámení" class="btn btn-sm btn-link m-0 py-0 icon-no-margin" href="https://moodle.czu.cz/message/notificationpreferences.php" title="Nastavení oznámení">
+               <i aria-hidden="true" class="afaicon fas fa-cog fa-fw">
+               </i>
+              </a>
+              <button aria-label="Zavřít" class="btn btn-sm btn-link m-0 py-0 icon-no-margin" data-action="close-notification-popover" title="Zavřít" type="button">
+               <i aria-hidden="true" class="afaicon fas fa-window-close fa-fw">
+               </i>
+              </button>
+             </div>
+            </div>
+            <div class="popover-region-content-container" data-region="popover-region-content-container">
+             <div class="popover-region-content" data-region="popover-region-content">
+              <div aria-atomic="false" aria-busy="false" aria-relevant="additions" class="all-notifications" data-region="all-notifications" role="log">
+              </div>
+              <div class="empty-message" data-region="empty-message" tabindex="0">
+               Nemáte žádná oznámení
+              </div>
+             </div>
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </div>
+            <a class="see-all-link" href="https://moodle.czu.cz/message/output/popup/notifications.php">
+             <div class="popover-region-footer-container">
+              <div class="popover-region-seeall-text">
+               Zobrazit vše
+              </div>
+             </div>
+            </a>
+           </div>
+          </div>
+          <div class="pull-right popover-region popover-region-messages collapsed">
+           <a class="nav-link d-inline-block popover-region-toggle position-relative" href="#" id="message-drawer-toggle-695c0b02406d7695c0b023d14154" role="button">
+            <i aria-label="Přepnout lištu zpráv" class="afaicon fas fa-comment fa-fw" role="img" title="Přepnout lištu zpráv">
+            </i>
+            <div aria-label="Počet nepřečtených konverzací: 0" class="count-container hidden" data-region="count-container">
+             0
+            </div>
+           </a>
+          </div>
+         </li>
+         <li class="nav-item dropdown">
+          <div class="usermenu">
+           <div class="action-menu moodle-actionmenu nowrap-items" data-enhance="moodle-core-actionmenu" id="action-menu-0">
+            <div class="menubar d-flex" id="action-menu-0-menubar">
+             <div class="action-menu-trigger">
+              <div class="dropdown">
+               <a aria-controls="action-menu-0-menu" aria-expanded="false" aria-haspopup="true" aria-label="Uživatelské menu" class="nav-link dropdown-toggle icon-no-margin" data-toggle="dropdown" href="#" id="action-menu-toggle-0" role="button" tabindex="0">
+                <span class="userbutton">
+                 <span class="usertext mr-1">
+                  Vedernikov Alexander
+                 </span>
+                 <span class="avatars">
+                  <span class="avatar current">
+                   <span aria-label="Vedernikov Alexander" class="userinitials size-35" role="img" title="Vedernikov Alexander">
+                    VA
+                   </span>
+                  </span>
+                 </span>
+                </span>
+                <b class="caret">
+                </b>
+               </a>
+               <div aria-labelledby="action-menu-toggle-0" class="dropdown-menu menu dropdown-menu-right" data-rel="menu-content" id="action-menu-0-menu" role="menu">
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/my" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-dashboard afaicon fa-fw">
+                  </i>
+                  Nástěnka
+                 </span>
+                </a>
+                <div class="dropdown-divider" role="presentation">
+                 <span class="filler">
+                 </span>
+                </div>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/user/profile.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-user afaicon fa-fw">
+                  </i>
+                  Zobrazit profil
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/user/edit.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-cog afaicon fa-fw">
+                  </i>
+                  Upravit profil
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/user/files.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-file afaicon fa-fw">
+                  </i>
+                  Osobní soubory
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/grade/report/overview/index.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-list-alt afaicon fa-fw">
+                  </i>
+                  Známky
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/user/preferences.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-cog afaicon fa-fw">
+                  </i>
+                  Předvolby
+                 </span>
+                </a>
+                <div class="dropdown-divider" role="presentation">
+                 <span class="filler">
+                 </span>
+                </div>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/calendar/view.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-calendar afaicon fa-fw">
+                  </i>
+                  Kalendář
+                 </span>
+                </a>
+                <div class="dropdown-divider" role="presentation">
+                 <span class="filler">
+                 </span>
+                </div>
+                <a class="dropdown-item menu-action" data-title="profile,moodle" href="https://moodle.czu.cz/user/profile.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  Profil
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" data-title="grades,grades" href="https://moodle.czu.cz/grade/report/overview/index.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  Známky
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" data-title="calendar,core_calendar" href="https://moodle.czu.cz/calendar/view.php?view=month" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  Kalendář
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" data-title="privatefiles,moodle" href="https://moodle.czu.cz/user/files.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  Osobní soubory
+                 </span>
+                </a>
+                <a class="dropdown-item menu-action" data-title="reports,core_reportbuilder" href="https://moodle.czu.cz/reportbuilder/index.php" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  Sestavy
+                 </span>
+                </a>
+                <div class="dropdown-divider" role="presentation">
+                 <span class="filler">
+                 </span>
+                </div>
+                <a class="dropdown-item menu-action" href="https://moodle.czu.cz/login/logout.php?sesskey=xNkFVUo7j6" role="menuitem" tabindex="-1">
+                 <span class="menu-action-text">
+                  <i aria-hidden="true" class="fa fa-sign-out afaicon fa-fw">
+                  </i>
+                  Odhlásit se
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </li>
+        </ul>
+       </div>
+      </nav>
+     </div>
+    </div>
+    <div class="main-header-row d-flex" id="page-header">
+     <div class="container">
+      <div class="row d-flex justify-content-start align-items-center h-100">
+       <div class="col-lg-8 p-0">
+        <div class="bd-highlight d-flex">
+         <div class="pb-2 pr-3 pt-2 bd-highlight d-inline-block">
+          <img alt="Moodle ČZU" id="logo" src="//moodle.czu.cz/pluginfile.php/1/theme_adaptable/logo/1765212079/CZU_moodle4_5_logo_svzel.png"/>
+         </div>
+         <div class="bd-highlight pt-2 d-inline-block" id="headertitle">
+          <h1>
+           <span id="coursetitle">
+            UNIXové operační systémy - INFO5, UNIXové operační ...
+           </span>
+          </h1>
+         </div>
+        </div>
+        <div id="course-header">
+        </div>
+       </div>
+       <div class="col-lg-4 d-flex justify-content-end">
+        <div class="headersearch pagelayoutoriginal d-none d-lg-inline-block">
+         <div class="simplesearchform adsimplesearchform" id="searchinput-navbar-695c0b023f8bf695c0b023d14152">
+          <div class="collapse" id="searchform-navbar-695c0b023f8bf695c0b023d14152">
+           <form accept-charset="utf-8" action="https://moodle.czu.cz/course/search.php" autocomplete="off" class="mform d-flex flex-wrap align-items-center searchform-navbar" method="get">
+            <input name="context" type="hidden" value="1169849"/>
+            <div class="input-group">
+             <input aria-label="Course search" autocomplete="off" class="form-control withclear" data-region="input" id="searchinput-695c0b023f8bf695c0b023d14152" name="q" placeholder="Course search" type="text"/>
+             <label for="searchinput-695c0b023f8bf695c0b023d14152">
+              <span class="sr-only">
+               Course search
+              </span>
+             </label>
+             <button class="btn btn-close adsimplesearchclose" data-action="closesearch" data-target="#searchform-navbar-695c0b023f8bf695c0b023d14152" data-toggle="collapse" type="button">
+              <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+              </i>
+              <span class="sr-only">
+               Zavřít
+              </span>
+             </button>
+             <button class="btn btn-submit" data-action="submit" type="submit">
+              <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+              </i>
+              <span class="sr-only">
+               Course search
+              </span>
+             </button>
+            </div>
+           </form>
+          </div>
+          <button aria-controls="searchform-navbar-695c0b023f8bf695c0b023d14152" aria-expanded="false" class="rounded-0 nav-link icon-no-margin" data-action="opensearch" data-target="#searchform-navbar-695c0b023f8bf695c0b023d14152" data-toggle="collapse" title="Přepnout vyhledávání" type="button">
+           <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+           </i>
+           <span class="sr-only">
+            Přepnout vyhledávání
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="d-flex" id="main-navbar">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="navbar navbar-expand btco-hover-menu">
+         <nav aria-label="Site links">
+          <ul class="navbar-nav">
+           <li class="nav-item">
+            <a class="nav-link" href="https://moodle.czu.cz/?redirect=0" title="Titulní stránka">
+             <i aria-hidden="true" class="fa-lg fa fa-home afaicon fa-fw">
+             </i>
+             <span class="menutitle">
+              Titulní stránka
+             </span>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://moodle.czu.cz/my/index.php" title="Nástěnka">
+             <i aria-hidden="true" class="fa-lg fa fa-dashboard afaicon fa-fw">
+             </i>
+             <span class="menutitle">
+              Nástěnka
+             </span>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://moodle.czu.cz/my/courses.php" title="Kurzy">
+             <i aria-hidden="true" class="fa-lg fa fa-th afaicon fa-fw">
+             </i>
+             <span class="menutitle">
+              Kurzy
+             </span>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://moodle.czu.cz/calendar/view.php" title="Události">
+             <i aria-hidden="true" class="fa-lg fa fa-calendar afaicon fa-fw">
+             </i>
+             <span class="menutitle">
+              Události
+             </span>
+            </a>
+           </li>
+          </ul>
+         </nav>
+         <ul class="navbar-nav ml-auto d-flex flex-wrap">
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="drawer drawer-left drawer-primary d-print-none not-initialized" data-close-on-resize="1" data-forceopen="0" data-preference="" data-region="fixed-drawer" data-state="show-drawer-primary" id="theme_adaptable-drawers-primary">
+    <div class="drawerheader">
+     <button class="btn drawertoggle icon-no-margin hidden" data-action="closedrawer" data-placement="right" data-target="theme_adaptable-drawers-primary" data-toggle="tooltip" data-toggler="drawers" title="Zavřít lištu">
+      <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+      </i>
+     </button>
+     <img alt="" class="logo py-1 h-100" src="https://moodle.czu.cz/pluginfile.php/1/core_admin/logocompact/300x300/1765212079/CZU_moodle4_logo_bila.png"/>
+     <div class="drawerheadercontent hidden">
+     </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+     <div class="list-group">
+      <a class="list-group-item list-group-item-action" href="https://moodle.czu.cz/?redirect=0">
+       <i aria-hidden="true" class="fa-lg fa fa-home afaicon fa-fw">
+       </i>
+       <span class="menutitle">
+        Titulní stránka
+       </span>
+      </a>
+      <a class="list-group-item list-group-item-action" href="https://moodle.czu.cz/my/index.php">
+       <i aria-hidden="true" class="fa-lg fa fa-dashboard afaicon fa-fw">
+       </i>
+       <span class="menutitle">
+        Nástěnka
+       </span>
+      </a>
+      <a class="list-group-item list-group-item-action" href="https://moodle.czu.cz/my/courses.php">
+       <i aria-hidden="true" class="fa-lg fa fa-th afaicon fa-fw">
+       </i>
+       <span class="menutitle">
+        Kurzy
+       </span>
+      </a>
+      <a class="list-group-item list-group-item-action" href="https://moodle.czu.cz/calendar/view.php">
+       <i aria-hidden="true" class="fa-lg fa fa-calendar afaicon fa-fw">
+       </i>
+       <span class="menutitle">
+        Události
+       </span>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="drawers" id="page">
+    <div class="drawer-toggles d-flex">
+     <div class="drawer-toggler drawer-left-toggle ml-auto d-print-none">
+      <button class="btn icon-no-margin" data-action="toggle" data-placement="left" data-target="theme_adaptable-drawers-sidepost" data-toggle="tooltip" data-toggler="drawers" title="Otevřít panel bloku">
+       <span class="sr-only">
+        Otevřít panel bloku
+       </span>
+       <span class="dir-ltr-hide">
+        <i aria-hidden="true" class="afaicon fas fa-chevron-left fa-fw">
+        </i>
+       </span>
+       <span class="dir-rtl-hide">
+        <i aria-hidden="true" class="afaicon fas fa-chevron-right fa-fw">
+        </i>
+       </span>
+      </button>
+     </div>
+    </div>
+    <div class="container outercont" id="maincontainer">
+     <div class="row">
+      <div class="col-12 pt-3 pb-3" id="page-second-header">
+       <div class="d-flex flex-fill flex-wrap align-items-center">
+        <div class="mr-auto d-none d-md-flex" id="page-navbar">
+         <nav aria-label="Breadcrumb" role="navigation">
+          <ol class="breadcrumb align-items-center d-none d-md-flex">
+           <li>
+            <a href="https://moodle.czu.cz/">
+             <i aria-hidden="true" class="fa-lg fa fa-home afaicon fa-fw">
+             </i>
+            </a>
+           </li>
+           <li>
+            <i aria-hidden="true" class="separator fa fa-angle-right afaicon fa-fw">
+            </i>
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+             <a href="https://moodle.czu.cz/course/index.php" itemprop="url">
+              <span itemprop="title">
+               Kurzy
+              </span>
+             </a>
+            </span>
+           </li>
+           <li>
+            <i aria-hidden="true" class="separator fa fa-angle-right afaicon fa-fw">
+            </i>
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+             <a href="https://moodle.czu.cz/course/view.php?id=10875" itemprop="url" title="UNIXové operační systémy - INFO5, UNIXové operační systémy - INFO5 komb. - ZS 25/26">
+              <span itemprop="title">
+               EIE63E, EIE92E
+              </span>
+             </a>
+            </span>
+           </li>
+           <li>
+            <i aria-hidden="true" class="separator fa fa-angle-right afaicon fa-fw">
+            </i>
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+             <a href="https://moodle.czu.cz/course/section.php?id=156304" itemprop="url">
+              <span itemprop="title">
+               04_Testy a kvízy
+              </span>
+             </a>
+            </span>
+           </li>
+           <li>
+            <i aria-hidden="true" class="separator fa fa-angle-right afaicon fa-fw">
+            </i>
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+             <a aria-current="page" href="https://moodle.czu.cz/mod/tcb/view.php?id=776603" itemprop="url" title="Modul Testovací centrum 2">
+              <span itemprop="title">
+               Testovací centrum - Zápočet
+              </span>
+             </a>
+            </span>
+           </li>
+          </ol>
+         </nav>
+        </div>
+        <div class="header-actions-container ml-auto" data-region="header-actions-container">
+        </div>
+       </div>
+       <div class="d-flex align-items-center">
+        <div class="mr-auto d-flex flex-column">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row" id="page-content">
+      <div class="col-12" id="region-main-box">
+       <section id="region-main">
+        <span class="notifications" id="user-notifications">
+        </span>
+        <span id="maincontent">
+        </span>
+        <h2>
+         Testovací centrum - Zápočet
+        </h2>
+        <div class="activity-header" data-for="page-activity-header">
+         <span class="sr-only">
+          Požadavky na absolvování
+         </span>
+         <div class="activity-information" data-activityname="Testovací centrum - Zápočet" data-region="activity-information">
+         </div>
+         <div class="activity-description" id="intro">
+          <div class="no-overflow">
+           <p dir="ltr" style="text-align: left;">
+            Registrace do Testovacího centra na zápočtový test
+           </p>
+          </div>
+         </div>
+        </div>
+        <div role="main">
+         <h2>
+          Testy v kurzu
+         </h2>
+         <div>
+          <hr style="border-top: 2px solid black;"/>
+          <strong>
+           Dbejte všech pokynů uvedených v Provozním řádu Testovacího centra PEF.
+          </strong>
+          <br/>
+          <p>
+           <strong>
+           </strong>
+          </p>
+          <p>
+           <a href="https://www.pef.czu.cz/dl/123266?lang=cs" target="_blank" title="Provozní řád Testovacího centra PEF (pdf)">
+            <strong>
+             <u>
+              Provozní řád Testovacího centra PEF (pdf)
+             </u>
+            </strong>
+           </a>
+          </p>
+          <h3 style="text-align: center;">
+           <span style="font-weight: bold;">
+            Testovací centrum PEF je otevřeno ve všední dny a výjimečně také o víkendech.
+           </span>
+           <br/>
+           <strong>
+            <span class="" style="color: rgb(0, 0, 0);">
+            </span>
+           </strong>
+          </h3>
+          <h3 style="text-align: center;">
+           <strong>
+            <span class="" style="color: rgb(0, 0, 0);">
+             Do prostor Testovacího centra PEF
+            </span>
+            <span class="" style="color: rgb(255, 0, 0);">
+             lze vstoupit pouze po předložení identifikační karty ČZU
+            </span>
+            <span class="" style="color: rgb(0, 0, 0);">
+             (ISIC, Alive nebo studentská) a to maximálně 10 minut před rezervovaným termínem.
+            </span>
+           </strong>
+          </h3>
+          <p style="text-align: center;">
+           <strong>
+            Bez identifikační karty ČZU nebudete moci test absolvovat a o rezervovaný termín tak přijdete.
+           </strong>
+          </p>
+          <div style="text-align: center; ">
+           Více informací naleznete
+           <a href="https://tc.pef.czu.cz">
+            <strong>
+             na webu Testovacího centra PEF
+            </strong>
+           </a>
+           .
+          </div>
+          <hr/>
+          <div style="text-align: center;">
+           <img alt="Co není dovoleno vnášet do TC PEF?" height="400" src="https://tc.pef.czu.cz/wp/wp-content/uploads/2024/02/20240118_172341-1-rotated.jpg" style="width:300px; height:400px;border:solid #fbfbfb 3px;box-shadow:5px 6px 4px #666;" width="300"/>
+           <p>
+           </p>
+           <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/EWT66j-PyD0?si=Dh-P_q-uXD9vW65m&amp;controls=0" style="border:solid #fbfbfb 3px;box-shadow:5px 6px 4px #666;" title="YouTube video player" width="560">
+           </iframe>
+          </div>
+          <hr/>
+          <div>
+           <br/>
+          </div>
+          <strong>
+           Follow all instructions in the Operating Rules of the FEM Test Centre.
+          </strong>
+          <br/>
+          <p>
+           <strong>
+           </strong>
+          </p>
+          <p>
+           <u>
+            <a href="https://www.pef.czu.cz/dl/123267?lang=en" target="_blank" title="https://www.pef.czu.cz/dl/123267?lang=en">
+             <strong>
+              Operating Rules of the FEM Test Centre (pdf)
+             </strong>
+            </a>
+           </u>
+          </p>
+          <h3 style="text-align: center;">
+           <span style="font-weight: bold;">
+            The FEM Testing Centre is open on working days and exceptionally also on weekends.
+           </span>
+           <br/>
+           <strong>
+            <span class="" style="color: rgb(0, 0, 0);">
+            </span>
+           </strong>
+          </h3>
+          <h3 style="text-align: center;">
+           <strong>
+            <span class="" style="color: rgb(0, 0, 0);">
+             Entry to the FEM Testing Centre
+            </span>
+            <span class="" style="color: rgb(255, 0, 0);">
+             is possible only upon the presentation of a CULS identification card
+            </span>
+            <span class="" style="color: rgb(0, 0, 0);">
+             (ISIC, Alive, or student) no more than 10 minutes before the booked session.
+            </span>
+           </strong>
+          </h3>
+          <p style="text-align: center;">
+           <strong>
+            Without a CULS identification card, you cannot take the test and lose your reserved session.
+           </strong>
+          </p>
+          <div style="text-align: center; ">
+           For more information, please visit the
+           <a href="https://tc.pef.czu.cz/">
+            <strong>
+             web of the FEM Testing Centr
+            </strong>
+           </a>
+           <b>
+            e
+           </b>
+           .
+           <br/>
+          </div>
+          <hr style="border-top: 1px dashed black;"/>
+          <hr style="border-top: 2px solid black;"/>
+         </div>
+         <div id="tc">
+          Přihlašování do Testovacího centra je omezeno následovně:
+         </div>
+         <div>
+          <ul>
+           <li>
+            přihlašování nejméně
+            <span class="">
+             02:00
+            </span>
+            hodin předem
+           </li>
+           <li>
+            odhlašování nejméně
+            <span class="">
+             02:00
+            </span>
+            hodin předem
+           </li>
+          </ul>
+         </div>
+         <hr/>
+         <h3>
+          Test:
+          <a href="https://moodle.czu.cz/mod/quiz/view.php?id=801703">
+           Teoretický zkouškový test ZS 2025
+          </a>
+         </h3>
+         <table class="table table-bordered table-responsive">
+          <tr>
+           <td>
+            otevřen od
+           </td>
+           <td>
+            17.12.2025 08:00
+           </td>
+          </tr>
+          <tr>
+           <td>
+            otevřen do
+           </td>
+           <td>
+            08.02.2026 19:30
+           </td>
+          </tr>
+          <tr>
+           <td>
+            doba trvání
+           </td>
+           <td>
+            00 h 30 m 00 s
+           </td>
+          </tr>
+         </table>
+         <h4>
+          Vaše rezervované termíny do Testovacího centra na tento test
+         </h4>
+         <div class="alert alert-warning">
+          Na tento test momentálně nemáte rezervované žádné budoucí termíny. Přihlaste se níže - začněte výběrem některého z dostupných dnů v kalendáři.
+         </div>
+         <h4>
+          Možnosti přihlášení do Testovacího centra na test Teoretický zkouškový test ZS 2025
+         </h4>
+         <span aria-controls="test801703" aria-expanded="false" class="btn btn-primary" data-target="#test801703" data-toggle="collapse">
+          zobrazit možnosti v kalendáři
+         </span>
+         <div class="collapse" id="test801703">
+          <h4>
+           leden 2026
+          </h4>
+          <table class="table table-bordered table-responsive">
+           <tr>
+            <td>
+             po
+            </td>
+            <td>
+             út
+            </td>
+            <td>
+             st
+            </td>
+            <td>
+             čt
+            </td>
+            <td>
+             pá
+            </td>
+            <td>
+             so
+            </td>
+            <td>
+             ne
+            </td>
+           </tr>
+           <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td class="alert alert-secondary">
+             01
+            </td>
+            <td class="alert alert-secondary">
+             02
+            </td>
+            <td class="alert alert-secondary">
+             03
+            </td>
+            <td class="alert alert-secondary">
+             04
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             05
+            </td>
+            <td class="alert alert-secondary">
+             06
+            </td>
+            <td class="alert alert-secondary">
+             07
+            </td>
+            <td class="alert alert-secondary">
+             08
+            </td>
+            <td class="alert alert-secondary">
+             09
+            </td>
+            <td class="alert alert-secondary">
+             10
+            </td>
+            <td class="alert alert-secondary">
+             11
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             12
+            </td>
+            <td class="alert alert-secondary">
+             13
+            </td>
+            <td class="alert alert-secondary">
+             14
+            </td>
+            <td class="alert alert-secondary">
+             15
+            </td>
+            <td class="alert alert-secondary">
+             16
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-17&amp;quiz=801703#tc">
+               17 (59 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-18&amp;quiz=801703#tc">
+               18 (323 🪑)
+              </a>
+             </strong>
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-19&amp;quiz=801703#tc">
+               19 (227 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-20&amp;quiz=801703#tc">
+               20 (456 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-21&amp;quiz=801703#tc">
+               21 (554 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-22&amp;quiz=801703#tc">
+               22 (566 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-23&amp;quiz=801703#tc">
+               23 (530 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-24&amp;quiz=801703#tc">
+               24 (539 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-25&amp;quiz=801703#tc">
+               25 (545 🪑)
+              </a>
+             </strong>
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-26&amp;quiz=801703#tc">
+               26 (587 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-27&amp;quiz=801703#tc">
+               27 (637 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-28&amp;quiz=801703#tc">
+               28 (653 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-29&amp;quiz=801703#tc">
+               29 (655 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-30&amp;quiz=801703#tc">
+               30 (652 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-01-31&amp;quiz=801703#tc">
+               31 (602 🪑)
+              </a>
+             </strong>
+            </td>
+            <td>
+            </td>
+           </tr>
+           <tr>
+           </tr>
+          </table>
+          <h4>
+           únor 2026
+          </h4>
+          <table class="table table-bordered table-responsive">
+           <tr>
+            <td>
+             po
+            </td>
+            <td>
+             út
+            </td>
+            <td>
+             st
+            </td>
+            <td>
+             čt
+            </td>
+            <td>
+             pá
+            </td>
+            <td>
+             so
+            </td>
+            <td>
+             ne
+            </td>
+           </tr>
+           <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-01&amp;quiz=801703#tc">
+               01 (602 🪑)
+              </a>
+             </strong>
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-02&amp;quiz=801703#tc">
+               02 (659 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-03&amp;quiz=801703#tc">
+               03 (664 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-04&amp;quiz=801703#tc">
+               04 (670 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-05&amp;quiz=801703#tc">
+               05 (669 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-06&amp;quiz=801703#tc">
+               06 (670 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-07&amp;quiz=801703#tc">
+               07 (608 🪑)
+              </a>
+             </strong>
+            </td>
+            <td class="alert alert-success">
+             <strong>
+              <a href="?id=776603&amp;day=2026-02-08&amp;quiz=801703#tc">
+               08 (609 🪑)
+              </a>
+             </strong>
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             09
+            </td>
+            <td class="alert alert-secondary">
+             10
+            </td>
+            <td class="alert alert-secondary">
+             11
+            </td>
+            <td class="alert alert-secondary">
+             12
+            </td>
+            <td class="alert alert-secondary">
+             13
+            </td>
+            <td class="alert alert-secondary">
+             14
+            </td>
+            <td class="alert alert-secondary">
+             15
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             16
+            </td>
+            <td class="alert alert-secondary">
+             17
+            </td>
+            <td class="alert alert-secondary">
+             18
+            </td>
+            <td class="alert alert-secondary">
+             19
+            </td>
+            <td class="alert alert-secondary">
+             20
+            </td>
+            <td class="alert alert-secondary">
+             21
+            </td>
+            <td class="alert alert-secondary">
+             22
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             23
+            </td>
+            <td class="alert alert-secondary">
+             24
+            </td>
+            <td class="alert alert-secondary">
+             25
+            </td>
+            <td class="alert alert-secondary">
+             26
+            </td>
+            <td class="alert alert-secondary">
+             27
+            </td>
+            <td class="alert alert-secondary">
+             28
+            </td>
+            <td>
+            </td>
+           </tr>
+           <tr>
+           </tr>
+          </table>
+          <h4>
+           březen 2026
+          </h4>
+          <table class="table table-bordered table-responsive">
+           <tr>
+            <td>
+             po
+            </td>
+            <td>
+             út
+            </td>
+            <td>
+             st
+            </td>
+            <td>
+             čt
+            </td>
+            <td>
+             pá
+            </td>
+            <td>
+             so
+            </td>
+            <td>
+             ne
+            </td>
+           </tr>
+           <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td class="alert alert-secondary">
+             01
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             02
+            </td>
+            <td class="alert alert-secondary">
+             03
+            </td>
+            <td class="alert alert-secondary">
+             04
+            </td>
+            <td class="alert alert-secondary">
+             05
+            </td>
+            <td class="alert alert-secondary">
+             06
+            </td>
+            <td class="alert alert-secondary">
+             07
+            </td>
+            <td class="alert alert-secondary">
+             08
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             09
+            </td>
+            <td class="alert alert-secondary">
+             10
+            </td>
+            <td class="alert alert-secondary">
+             11
+            </td>
+            <td class="alert alert-secondary">
+             12
+            </td>
+            <td class="alert alert-secondary">
+             13
+            </td>
+            <td class="alert alert-secondary">
+             14
+            </td>
+            <td class="alert alert-secondary">
+             15
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             16
+            </td>
+            <td class="alert alert-secondary">
+             17
+            </td>
+            <td class="alert alert-secondary">
+             18
+            </td>
+            <td class="alert alert-secondary">
+             19
+            </td>
+            <td class="alert alert-secondary">
+             20
+            </td>
+            <td class="alert alert-secondary">
+             21
+            </td>
+            <td class="alert alert-secondary">
+             22
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             23
+            </td>
+            <td class="alert alert-secondary">
+             24
+            </td>
+            <td class="alert alert-secondary">
+             25
+            </td>
+            <td class="alert alert-secondary">
+             26
+            </td>
+            <td class="alert alert-secondary">
+             27
+            </td>
+            <td class="alert alert-secondary">
+             28
+            </td>
+            <td class="alert alert-secondary">
+             29
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             30
+            </td>
+            <td class="alert alert-secondary">
+             31
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+           </tr>
+           <tr>
+           </tr>
+          </table>
+          <h4>
+           duben 2026
+          </h4>
+          <table class="table table-bordered table-responsive">
+           <tr>
+            <td>
+             po
+            </td>
+            <td>
+             út
+            </td>
+            <td>
+             st
+            </td>
+            <td>
+             čt
+            </td>
+            <td>
+             pá
+            </td>
+            <td>
+             so
+            </td>
+            <td>
+             ne
+            </td>
+           </tr>
+           <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td class="alert alert-secondary">
+             01
+            </td>
+            <td class="alert alert-secondary">
+             02
+            </td>
+            <td class="alert alert-secondary">
+             03
+            </td>
+            <td class="alert alert-secondary">
+             04
+            </td>
+            <td class="alert alert-secondary">
+             05
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             06
+            </td>
+            <td class="alert alert-secondary">
+             07
+            </td>
+            <td class="alert alert-secondary">
+             08
+            </td>
+            <td class="alert alert-secondary">
+             09
+            </td>
+            <td class="alert alert-secondary">
+             10
+            </td>
+            <td class="alert alert-secondary">
+             11
+            </td>
+            <td class="alert alert-secondary">
+             12
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             13
+            </td>
+            <td class="alert alert-secondary">
+             14
+            </td>
+            <td class="alert alert-secondary">
+             15
+            </td>
+            <td class="alert alert-secondary">
+             16
+            </td>
+            <td class="alert alert-secondary">
+             17
+            </td>
+            <td class="alert alert-secondary">
+             18
+            </td>
+            <td class="alert alert-secondary">
+             19
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             20
+            </td>
+            <td class="alert alert-secondary">
+             21
+            </td>
+            <td class="alert alert-secondary">
+             22
+            </td>
+            <td class="alert alert-secondary">
+             23
+            </td>
+            <td class="alert alert-secondary">
+             24
+            </td>
+            <td class="alert alert-secondary">
+             25
+            </td>
+            <td class="alert alert-secondary">
+             26
+            </td>
+           </tr>
+           <tr>
+            <td class="alert alert-secondary">
+             27
+            </td>
+            <td class="alert alert-secondary">
+             28
+            </td>
+            <td class="alert alert-secondary">
+             29
+            </td>
+            <td class="alert alert-secondary">
+             30
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+           </tr>
+           <tr>
+           </tr>
+          </table>
+         </div>
+         <hr/>
+         <h3>
+          Test:
+          <a href="https://moodle.czu.cz/mod/quiz/view.php?id=703892">
+           Zápočtový test
+          </a>
+         </h3>
+         <table class="table table-bordered table-responsive">
+          <tr>
+           <td>
+            otevřen od
+           </td>
+           <td>
+            20.10.2025 08:00
+           </td>
+          </tr>
+          <tr>
+           <td>
+            otevřen do
+           </td>
+           <td>
+            08.02.2026 18:00
+           </td>
+          </tr>
+          <tr>
+           <td>
+            doba trvání
+           </td>
+           <td>
+            00 h 15 m 00 s
+           </td>
+          </tr>
+         </table>
+         <h4>
+          Vaše rezervované termíny do Testovacího centra na tento test
+         </h4>
+         <table class="table table-bordered table-responsive">
+          <tr>
+           <th>
+           </th>
+           <th>
+            datum
+           </th>
+           <th>
+            čas
+           </th>
+           <th>
+            přijďte v
+           </th>
+           <th>
+            stav / akce
+           </th>
+          </tr>
+          <tr>
+           <td>
+            Rezervovaný termín:
+           </td>
+           <td>
+            18.11.2025
+           </td>
+           <td>
+            13:20
+           </td>
+           <td>
+           </td>
+           <td>
+            již proběhl
+           </td>
+          </tr>
+          <tr>
+           <td>
+            Rezervovaný termín:
+           </td>
+           <td>
+            15.01.2026
+           </td>
+           <td>
+            18:20
+           </td>
+           <td>
+            18:10
+           </td>
+           <td>
+            <strong>
+             <a href="https://moodle.czu.cz/mod/tcb/view.php?id=776603&amp;unregister=407275#tc">
+              odhlásit se
+             </a>
+            </strong>
+            (do 15.01. 16:20)
+           </td>
+          </tr>
+         </table>
+         <h4>
+          Možnosti přihlášení do Testovacího centra na test Zápočtový test
+         </h4>
+         <div class="alert alert-danger">
+          Aktuálně se nemůžete hlásit na další termíny, protože máte termín rezervovaný. V jednu chvíli nemůžete mít přihlášeno více nevyužitých termínů na stejný test.
+         </div>
+         <div>
+          <hr/>
+         </div>
+         <script>
+          function confirmTC() {
+    t = "Potvrzuji, že jsem se seznámil/a s Provozním řádem TC PEF a beru ho na vědomí.\nI confirm that I have read and accept the Operating rules of FEM TC.";
+	if(!confirm(t)) event.preventDefault()
+}
+         </script>
+         <div>
+          <hr/>
+         </div>
+         <div class="small">
+          Icons made by
+          <a href="http://www.freepik.com" title="Freepik">
+           Freepik
+          </a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon">
+           www.flaticon.com
+          </a>
+          is licensed by
+          <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons BY 3.0">
+           CC 3.0 BY
+          </a>
+         </div>
+        </div>
+        <div id="adaptable-activity-navigation">
+         <nav class="activity_footer activity-navigation">
+          <div class="row">
+           <div class="col-md-6">
+            <div class="float-left">
+             <a class="previous_activity prevnext" href="https://moodle.czu.cz/mod/url/view.php?id=789437&amp;forceview=1" id="prev-activity-link">
+              <span class="nav_icon">
+               <i class="fa fa-angle-double-left">
+               </i>
+              </span>
+              <span class="text">
+               <span class="nav_guide">
+                Previous activity
+               </span>
+               <br/>
+               02_Filters_advanced_video
+              </span>
+             </a>
+            </div>
+           </div>
+           <div class="col-md-6">
+            <div class="float-right">
+             <a class="next_activity prevnext" href="https://moodle.czu.cz/mod/quiz/view.php?id=703892&amp;forceview=1" id="next-activity-link">
+              <span class="text">
+               <span class="nav_guide">
+                Next activity
+               </span>
+               <br/>
+               Zápočtový test
+              </span>
+              <span class="nav_icon">
+               <i class="fa fa-angle-double-right">
+               </i>
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </nav>
+         <div class="jumpnav">
+          <div class="jumpmenu">
+           <form action="https://moodle.czu.cz/course/jumpto.php" class="d-flex flex-wrap align-items-center" id="url_select_f695c0b023d14155" method="post">
+            <input name="sesskey" type="hidden" value="xNkFVUo7j6"/>
+            <label class="sr-only" for="jump-to-activity">
+             Přejít na...
+            </label>
+            <select class="custom-select jumpmenu" id="jump-to-activity" name="jump">
+             <option selected="" value="">
+              Přejít na...
+             </option>
+             <option value="/mod/url/view.php?id=796449&amp;forceview=1">
+              Podmínky zápočtu a zkoušky
+             </option>
+             <option value="/mod/url/view.php?id=775260&amp;forceview=1">
+              Přednáška 1 - History and Architecture of Unix
+             </option>
+             <option value="/mod/url/view.php?id=780594&amp;forceview=1">
+              UOS - Přednáška 1 - 30.9.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=775261&amp;forceview=1">
+              Přednáška 2 - Working with Files
+             </option>
+             <option value="/mod/url/view.php?id=784533&amp;forceview=1">
+              UOS - Přednáška 2 - 7. 10.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=777117&amp;forceview=1">
+              Přednáška 3 - Filters and Text Processing
+             </option>
+             <option value="/mod/url/view.php?id=785669&amp;forceview=1">
+              UOS - Přednáška 3 - 14.10.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=777123&amp;forceview=1">
+              Optional lecture: sed and awk
+             </option>
+             <option value="/mod/url/view.php?id=777134&amp;forceview=1">
+              Přednáška 4 - Command Line Parsing Order
+             </option>
+             <option value="/mod/url/view.php?id=787501&amp;forceview=1">
+              UOS - Přednáška 4 - 21.10.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=785277&amp;forceview=1">
+              Přednáška 5 - Exit code. Command test. Flow Control. Loops
+             </option>
+             <option value="/mod/url/view.php?id=791463&amp;forceview=1">
+              UOS - Přednáška 5 - 4.11.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=790887&amp;forceview=1">
+              Přednáška 6 - Users and Identity
+             </option>
+             <option value="/mod/url/view.php?id=793706&amp;forceview=1">
+              Přednáška 6 - 11.11.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=790886&amp;forceview=1">
+              Přednáška 7 - Find, Archiving, Compression
+             </option>
+             <option value="/mod/url/view.php?id=795316&amp;forceview=1">
+              Přednáška 7 - 18.11.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=796356&amp;forceview=1">
+              Přednáška 8 - Processes and Threads. Signals
+             </option>
+             <option value="/mod/url/view.php?id=796357&amp;forceview=1">
+              Přednáška 9 - Development of Programs in the C Language
+             </option>
+             <option value="/mod/url/view.php?id=796442&amp;forceview=1">
+              Přednáška 8 - 25.11.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=796441&amp;forceview=1">
+              Přednáška 10 - Networking
+             </option>
+             <option value="/mod/url/view.php?id=797856&amp;forceview=1">
+              Přednáška 9 - 2.12.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=797145&amp;forceview=1">
+              Přednáška 11 - System Administration
+             </option>
+             <option value="/mod/url/view.php?id=800452&amp;forceview=1">
+              Přednáška 10 - 9.12.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=801817&amp;forceview=1">
+              Přednáška 11 - 16.12.2025 - Nahrávka
+             </option>
+             <option value="/mod/url/view.php?id=735748&amp;forceview=1">
+              01_Introduction_to_UNIX_Presentation
+             </option>
+             <option value="/mod/url/view.php?id=703867&amp;forceview=1">
+              00_Lecturer_Martin_Cejka
+             </option>
+             <option value="/mod/url/view.php?id=781381&amp;forceview=1">
+              Course organisation
+             </option>
+             <option value="/mod/url/view.php?id=703871&amp;forceview=1">
+              01_Introduction_to_Unix_Video
+             </option>
+             <option value="/mod/url/view.php?id=784177&amp;forceview=1">
+              01_Příkazy ze cvičení – Štěpán Pešout
+             </option>
+             <option value="/mod/url/view.php?id=735749&amp;forceview=1">
+              02_Data_Processing_Presentation
+             </option>
+             <option value="/mod/url/view.php?id=789437&amp;forceview=1">
+              02_Filters_advanced_video
+             </option>
+             <option value="/mod/quiz/view.php?id=703892&amp;forceview=1">
+              Zápočtový test
+             </option>
+             <option value="/mod/tcb/view.php?id=801712&amp;forceview=1">
+              Testovací centrum - Teoretická zkouška 2025
+             </option>
+             <option value="/mod/quiz/view.php?id=801703&amp;forceview=1">
+              Teoretický zkouškový test ZS 2025
+             </option>
+             <option value="/mod/quiz/view.php?id=703901&amp;forceview=1">
+              Praktický zkouškový test ZS 2025-2026
+             </option>
+             <option value="/mod/resource/view.php?id=800830&amp;forceview=1">
+              2026_Vzorový teoretický zkouškový test
+             </option>
+             <option value="/mod/quiz/view.php?id=703898&amp;forceview=1">
+              Vzorový zkouškový praktický test
+             </option>
+             <option value="/mod/url/view.php?id=703890&amp;forceview=1">
+              Jak udělat zkoušku
+             </option>
+             <option value="/mod/url/view.php?id=703891&amp;forceview=1">
+              Systémové služby (fork)
+             </option>
+             <option value="/mod/mediasite/view.php?id=703903&amp;forceview=1">
+              P01 Základy práce s terminálem, základy navigace ve filesystému
+             </option>
+             <option value="/mod/mediasite/view.php?id=703904&amp;forceview=1">
+              P02 Základy práce s VI editorem
+             </option>
+             <option value="/mod/mediasite/view.php?id=703905&amp;forceview=1">
+              P03 Shell script
+             </option>
+             <option value="/mod/mediasite/view.php?id=703906&amp;forceview=1">
+              P04 Programování v C
+             </option>
+             <option value="/mod/quiz/view.php?id=703900&amp;forceview=1">
+              2025_Zkouškový teoretický test
+             </option>
+             <option value="/mod/quiz/view.php?id=703908&amp;forceview=1">
+              Vzorový praktický zkouškový test_2023
+             </option>
+             <option value="/mod/quiz/view.php?id=703909&amp;forceview=1">
+              2020-2022_Generovaný zkouškový test
+             </option>
+             <option value="/mod/quiz/view.php?id=703910&amp;forceview=1">
+              2020-2022_Vzorový zkouškový test
+             </option>
+             <option value="/mod/folder/view.php?id=703911&amp;forceview=1">
+              Úlohy k procvičení
+             </option>
+             <option value="/mod/url/view.php?id=703913&amp;forceview=1">
+              Další taháky pro VIM
+             </option>
+             <option value="/mod/url/view.php?id=703914&amp;forceview=1">
+              Tahák pro VIM (anglicky)
+             </option>
+             <option value="/mod/resource/view.php?id=703915&amp;forceview=1">
+              VI editor - stručný návod
+             </option>
+             <option value="/mod/url/view.php?id=703916&amp;forceview=1">
+              vim_editor
+             </option>
+             <option value="/mod/url/view.php?id=703917&amp;forceview=1">
+              nano_editor
+             </option>
+             <option value="/mod/url/view.php?id=703919&amp;forceview=1">
+              Program PuTTY pro připojení k serveru
+             </option>
+             <option value="/mod/url/view.php?id=703920&amp;forceview=1">
+              Program WinSCP pro kopírování souborů z/na server
+             </option>
+             <option value="/mod/resource/view.php?id=703925&amp;forceview=1">
+              Řízení procesů
+             </option>
+             <option value="/mod/resource/view.php?id=703926&amp;forceview=1">
+              Programování v Bourne shellu
+             </option>
+             <option value="/mod/resource/view.php?id=703927&amp;forceview=1">
+              (Programování v C shellu)
+             </option>
+             <option value="/mod/resource/view.php?id=703928&amp;forceview=1">
+              Komunikace s okolními počítači
+             </option>
+             <option value="/mod/resource/view.php?id=703929&amp;forceview=1">
+              Rozumíme Unixu
+             </option>
+             <option value="/mod/resource/view.php?id=703930&amp;forceview=1">
+              Bash očima Bohdana Milara
+             </option>
+             <option value="/mod/url/view.php?id=703933&amp;forceview=1">
+              Seriál Unixové nástroje
+             </option>
+             <option value="/mod/url/view.php?id=703934&amp;forceview=1">
+              Seriál Bash
+             </option>
+             <option value="/mod/url/view.php?id=703937&amp;forceview=1">
+              Programováni v (bash) shellu (root.cz)
+             </option>
+             <option value="/mod/url/view.php?id=703938&amp;forceview=1">
+              Unix tutorial for beginners
+             </option>
+             <option value="/mod/url/view.php?id=703939&amp;forceview=1">
+              Vysvětlování zadaných příkazů
+             </option>
+             <option value="/mod/url/view.php?id=703940&amp;forceview=1">
+              Bash guide for beginners
+             </option>
+             <option value="/mod/url/view.php?id=703941&amp;forceview=1">
+              Advanced bash-scripting guide
+             </option>
+             <option value="/mod/url/view.php?id=703942&amp;forceview=1">
+              Bash hackers WIKI
+             </option>
+             <option value="/mod/resource/view.php?id=703943&amp;forceview=1">
+              Linux praktické návody
+             </option>
+             <option value="/mod/resource/view.php?id=703946&amp;forceview=1">
+              Linux_Průvodce jádrem
+             </option>
+             <option value="/mod/resource/view.php?id=703948&amp;forceview=1">
+              Podrobná dokumentace Linuxu (CPRESS)
+             </option>
+             <option value="/mod/resource/view.php?id=703949&amp;forceview=1">
+              Učebnice ABC Linuxu
+             </option>
+             <option value="/mod/url/view.php?id=703950&amp;forceview=1">
+              A-Z Linux Command Line
+             </option>
+             <option value="/mod/url/view.php?id=703951&amp;forceview=1">
+              Regulární výrazy
+             </option>
+             <option value="/mod/url/view.php?id=703952&amp;forceview=1">
+              Zkoušení regulárních výrazů
+             </option>
+             <option value="/mod/resource/view.php?id=703953&amp;forceview=1">
+              Regulární výrazy tahák
+             </option>
+             <option value="/mod/url/view.php?id=703954&amp;forceview=1">
+              Testování znalostí regulárních výrazů
+             </option>
+             <option value="/mod/resource/view.php?id=703955&amp;forceview=1">
+              Purpose of each of the common Linux root sub-directories
+             </option>
+             <option value="/mod/resource/view.php?id=703956&amp;forceview=1">
+              GREP, AWK, SED a jiné filtry
+             </option>
+             <option value="/mod/url/view.php?id=703958&amp;forceview=1">
+              Ubuntu as Windows Subsystem for Linux (WSL)
+             </option>
+             <option value="/mod/url/view.php?id=703959&amp;forceview=1">
+              Ubuntu Using a Virtual Machine
+             </option>
+             <option value="/mod/url/view.php?id=703960&amp;forceview=1">
+              Ubuntu as Dual Boot
+             </option>
+             <option value="/mod/url/view.php?id=703961&amp;forceview=1">
+              Kali Linux Using a Virtual Machine
+             </option>
+             <option value="/mod/url/view.php?id=703962&amp;forceview=1">
+              Kali Linux as Dual Boot
+             </option>
+             <option value="/mod/url/view.php?id=703963&amp;forceview=1">
+              Gitbash on Windows OS
+             </option>
+            </select>
+            <noscript>
+             <input class="btn btn-secondary ms-1" type="submit" value="Proveď"/>
+            </noscript>
+           </form>
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+     </div>
+    </div>
+    <div aria-hidden="true" class="drawer bg-white hidden" data-region="right-hand-drawer" id="drawer-695c0b02420bc695c0b023d14156" role="region" tabindex="0">
+     <div class="message-app" data-region="message-drawer" id="message-drawer-695c0b02420bc695c0b023d14156" role="region">
+      <div class="d-flex justify-content-between align-items-center py-1 px-2 border-bottom bg-messageheader">
+       <h2 class="mb-0">
+        Zprávy
+       </h2>
+       <div class="closewidget">
+        <a class="" data-action="closedrawer" href="#" title="Zavřít">
+         <i aria-hidden="true" class="afaicon fas fa-window-close fa-fw">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="header-container position-relative" data-region="header-container">
+       <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2" data-region="view-contacts">
+        <div class="d-flex align-items-center">
+         <div class="align-self-stretch">
+          <a class="h-100 d-flex align-items-center me-2" data-route-back="" href="#" role="button">
+           <div class="icon-back-in-drawer">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="afaicon fas fa-chevron-left fa-fw">
+             </i>
+            </span>
+            <span class="dir-ltr-hide">
+             <i aria-hidden="true" class="afaicon fas fa-chevron-right fa-fw">
+             </i>
+            </span>
+           </div>
+           <div class="icon-back-in-app">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+             </i>
+            </span>
+           </div>
+          </a>
+         </div>
+         <div>
+          Kontakty
+         </div>
+         <div class="ms-auto">
+          <a aria-label="Hledej" data-route="view-search" href="#" role="button">
+           <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div aria-hidden="true" class="hidden bg-white position-relative border-bottom p-1 px-sm-2" data-region="view-conversation">
+        <div class="hidden" data-region="header-content">
+        </div>
+        <div class="hidden" data-region="header-edit-mode">
+         <div class="d-flex p-2 align-items-center">
+          Vybrané zprávy:
+          <span class="ms-1" data-region="message-selected-court">
+           1
+          </span>
+          <button aria-label="Zrušení výběru zprávy" class="ms-auto btn-close" data-action="cancel-edit-mode" type="button">
+           <span aria-hidden="true">
+            ×
+           </span>
+          </button>
+         </div>
+        </div>
+        <div data-region="header-placeholder">
+         <div class="d-flex">
+          <div class="ms-2 rounded-circle bg-pulse-grey align-self-center" style="height: 38px; width: 38px">
+          </div>
+          <div class="ms-2" style="flex: 1">
+           <div class="mt-1 bg-pulse-grey w-75" style="height: 16px;">
+           </div>
+          </div>
+          <div class="ms-2 bg-pulse-grey align-self-center" style="height: 16px; width: 20px">
+          </div>
+         </div>
+        </div>
+        <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);">
+        </div>
+       </div>
+       <div aria-hidden="false" class="border-bottom p-1 px-sm-2" data-region="view-overview">
+        <div class="d-flex align-items-center">
+         <div aria-labelledby="messageoverviewgrouplabel" class="input-group simplesearchform" role="group">
+          <span class="sr-only" id="messageoverviewgrouplabel">
+           Hledání osob a zpráv
+          </span>
+          <input aria-label="Hledej" class="form-control" data-region="view-overview-search-input" placeholder="Hledej" type="text"/>
+          <div class="input-group-append">
+           <span class="icon-no-margin btn btn-submit">
+            <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+            </i>
+           </span>
+          </div>
+         </div>
+         <div class="ms-2">
+          <a aria-label="Nastavení" data-route="view-settings" data-route-param="106032" href="#" role="button">
+           <i aria-hidden="true" class="afaicon fas fa-cog fa-fw">
+           </i>
+          </a>
+         </div>
+        </div>
+        <div class="text-end mt-sm-3">
+         <a data-route="view-contacts" href="#" role="button">
+          <i aria-hidden="true" class="afaicon fas fa-user fa-fw">
+          </i>
+          Kontakty
+          <span class="badge bg-primary text-white ms-2 hidden" data-region="contact-request-count">
+           <span aria-hidden="true">
+            0
+           </span>
+           <span class="sr-only">
+            Počet nevyřízených žádost o kontakt: 0
+           </span>
+          </span>
+         </a>
+        </div>
+       </div>
+       <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2 view-search" data-region="view-search">
+        <div class="d-flex align-items-center">
+         <a class="me-2 align-self-stretch d-flex align-items-center" data-action="cancel-search" data-route-back="" href="#" role="button">
+          <div class="icon-back-in-drawer">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="afaicon fas fa-chevron-left fa-fw">
+            </i>
+           </span>
+           <span class="dir-ltr-hide">
+            <i aria-hidden="true" class="afaicon fas fa-chevron-right fa-fw">
+            </i>
+           </span>
+          </div>
+          <div class="icon-back-in-app">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+            </i>
+           </span>
+          </div>
+         </a>
+         <div aria-labelledby="messagesearchgrouplabel" class="input-group simplesearchform" role="group">
+          <span class="sr-only" id="messagesearchgrouplabel">
+           Hledání osob a zpráv
+          </span>
+          <input aria-label="Hledej" class="form-control" data-region="search-input" placeholder="Hledej" type="text"/>
+          <div class="input-group-append">
+           <button aria-label="Provést vyhledávání" class="btn btn-submit icon-no-margin" data-action="search" title="Provést vyhledávání" type="button">
+            <span data-region="search-icon-container">
+             <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+             </i>
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2 pb-sm-3" data-region="view-settings">
+        <div class="d-flex align-items-center">
+         <div class="align-self-stretch">
+          <a class="h-100 d-flex me-2 align-items-center" data-route-back="" href="#" role="button">
+           <div class="icon-back-in-drawer">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="afaicon fas fa-chevron-left fa-fw">
+             </i>
+            </span>
+            <span class="dir-ltr-hide">
+             <i aria-hidden="true" class="afaicon fas fa-chevron-right fa-fw">
+             </i>
+            </span>
+           </div>
+           <div class="icon-back-in-app">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="afaicon fas fa-times fa-fw">
+             </i>
+            </span>
+           </div>
+          </a>
+         </div>
+         <div>
+          Nastavení
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="body-container position-relative" data-region="body-container">
+       <div aria-hidden="true" class="hidden" data-region="view-contact">
+        <div class="p-2 pt-3" data-region="content-container">
+        </div>
+       </div>
+       <div aria-hidden="true" class="hidden h-100" data-region="view-contacts" data-user-id="106032">
+        <div class="d-flex flex-column h-100">
+         <div class="p-3 border-bottom">
+          <ul class="nav nav-pills nav-fill" role="tablist">
+           <li class="nav-item">
+            <a aria-controls="contacts-tab-panel-695c0b02420bc695c0b023d14156" aria-selected="true" class="nav-link active" data-action="show-contacts-section" data-toggle="tab" href="#contacts-tab-panel-695c0b02420bc695c0b023d14156" id="contacts-tab-695c0b02420bc695c0b023d14156" role="tab">
+             Kontakty
+            </a>
+           </li>
+           <li class="nav-item">
+            <a aria-controls="requests-tab-panel-695c0b02420bc695c0b023d14156" aria-selected="false" class="nav-link" data-action="show-requests-section" data-toggle="tab" href="#requests-tab-panel-695c0b02420bc695c0b023d14156" id="requests-tab-695c0b02420bc695c0b023d14156" role="tab">
+             Žádosti
+             <span class="badge bg-primary text-white ms-2 hidden" data-region="contact-request-count">
+              <span aria-hidden="true">
+               0
+              </span>
+              <span class="sr-only">
+               Počet nevyřízených žádost o kontakt: 0
+              </span>
+             </span>
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div class="tab-content d-flex flex-column h-100">
+          <div aria-labelledby="contacts-tab-695c0b02420bc695c0b023d14156" aria-live="polite" class="tab-pane fade show active h-100 lazy-load-list" data-region="lazy-load-list" data-section="contacts" data-user-id="106032" id="contacts-tab-panel-695c0b02420bc695c0b023d14156" role="tabpanel">
+           <div class="hidden text-center p-2" data-region="empty-message-container">
+            Žádné kontakty
+           </div>
+           <div class="hidden list-group" data-region="content-container">
+           </div>
+           <div class="list-group" data-region="placeholder-container">
+           </div>
+           <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </div>
+          </div>
+          <div aria-labelledby="requests-tab-695c0b02420bc695c0b023d14156" aria-live="polite" class="tab-pane fade h-100 lazy-load-list" data-region="lazy-load-list" data-section="requests" data-user-id="106032" id="requests-tab-panel-695c0b02420bc695c0b023d14156" role="tabpanel">
+           <div class="hidden text-center p-2" data-region="empty-message-container">
+            Žádné žádosti o kontakt
+           </div>
+           <div class="hidden list-group" data-region="content-container">
+           </div>
+           <div class="list-group" data-region="placeholder-container">
+           </div>
+           <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-hidden="true" class="view-conversation hidden h-100" data-message-poll-after-max="300" data-message-poll-max="120" data-message-poll-min="10" data-midnight="1767567600" data-region="view-conversation" data-user-id="106032" style="overflow-y: auto; overflow-x: hidden">
+        <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+         <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+          <div class="py-3 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+           <p class="m-0">
+            Požadavek na kontakt byl odeslán
+           </p>
+           <p class="font-italic font-weight-light" data-region="text">
+           </p>
+          </div>
+          <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+           <p class="m-0">
+            Osobní prostor
+           </p>
+           <p class="font-italic font-weight-light" data-region="text">
+            Uložení konceptu zpráv, odkazů, poznámek atd. pro pozdější přístup.
+           </p>
+          </div>
+          <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+            </i>
+           </span>
+          </div>
+         </div>
+         <div class="p-4 w-100 h-100 hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+          <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+           <p class="text-muted" data-region="dialogue-text">
+           </p>
+           <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+            <input class="custom-control-input" data-region="delete-messages-for-all-users-toggle" id="delete-messages-for-all-users" type="checkbox"/>
+            <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+             Odstranit pro mě a pro všechny ostatní
+            </label>
+           </div>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-block" type="button">
+            <span data-region="dialogue-button-text">
+             Blok
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-unblock" type="button">
+            <span data-region="dialogue-button-text">
+             Odblokovat
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact" type="button">
+            <span data-region="dialogue-button-text">
+             Odstranit
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-add-contact" type="button">
+            <span data-region="dialogue-button-text">
+             Přidat
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages" type="button">
+            <span data-region="dialogue-button-text">
+             Odstranit
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation" type="button">
+            <span data-region="dialogue-button-text">
+             Odstranit
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="request-add-contact" type="button">
+            <span data-region="dialogue-button-text">
+             Odeslat žádost o kontakt
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block hidden" data-action="accept-contact-request" type="button">
+            <span data-region="dialogue-button-text">
+             Schválit a přidat do kontaktů
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-secondary btn-block hidden" data-action="decline-contact-request" type="button">
+            <span data-region="dialogue-button-text">
+             Odmítnout
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+           <button class="btn btn-primary btn-block" data-action="okay-confirm" type="button">
+            OK
+           </button>
+           <button class="btn btn-secondary btn-block" data-action="cancel-confirm" type="button">
+            Zrušit
+           </button>
+          </div>
+         </div>
+         <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+          <div class="h-100 d-flex flex-column">
+           <div class="px-2 pb-2 pt-0 bg-light h-100" style="overflow-y: auto">
+            <div class="mt-4">
+             <div class="mb-4">
+              <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+            </div>
+            <div class="mt-4">
+             <div class="mb-4">
+              <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+            </div>
+            <div class="mt-4">
+             <div class="mb-4">
+              <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+            </div>
+            <div class="mt-4">
+             <div class="mb-4">
+              <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+            </div>
+            <div class="mt-4">
+             <div class="mb-4">
+              <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+             <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+              <div class="d-flex align-items-center mb-2">
+               <div class="me-2">
+                <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+                </div>
+               </div>
+               <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+               </div>
+               <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+               </div>
+              </div>
+              <div class="bg-pulse-grey w-100" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+              </div>
+              <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-hidden="true" class="hidden" data-region="view-group-info">
+        <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto">
+        </div>
+       </div>
+       <div aria-hidden="false" class="h-100 view-overview-body" data-region="view-overview" data-user-id="106032">
+        <div class="d-flex flex-column h-100" id="message-drawer-view-overview-container-695c0b02420bc695c0b023d14156" style="overflow-y: auto">
+         <div class="section border-0 card rounded-0" data-region="view-overview-favourites">
+          <div class="card-header rounded-0" data-region="toggle" id="view-overview-favourites-toggle">
+           <button aria-controls="view-overview-favourites-target-695c0b02420bc695c0b023d14156" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-favourites-target-695c0b02420bc695c0b023d14156" data-toggle="collapse">
+            <span class="collapsed-icon-container">
+             <span class="dir-rtl-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+             <span class="dir-ltr-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+            </span>
+            <span class="expanded-icon-container">
+             <i aria-hidden="true" class="afaicon fas fa-caret-down fa-fw">
+             </i>
+            </span>
+            <span class="font-weight-bold ms-1">
+             Označeno hvězdičkou
+            </span>
+            <small aria-labelledby="view-overview-favourites-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+             (
+             <span aria-hidden="true" data-region="section-total-count">
+             </span>
+             )
+             <span class="sr-only" id="view-overview-favourites-total-count-label">
+              Celkový počet konverzací:
+             </span>
+            </small>
+            <span class="hidden ms-2" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+            <span aria-labelledby="view-overview-favourites-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+             <span aria-hidden="true" data-region="section-unread-count">
+             </span>
+             <span class="sr-only" id="view-overview-favourites-unread-count-label">
+              Počet nepřečtených konverzací:
+             </span>
+            </span>
+           </button>
+          </div>
+          <div aria-labelledby="view-overview-favourites-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-695c0b02420bc695c0b023d14156" data-region="lazy-load-list" data-user-id="106032" id="view-overview-favourites-target-695c0b02420bc695c0b023d14156">
+           <div class="hidden text-center p-2" data-region="empty-message-container">
+            <p class="text-muted mt-2">
+             Žádné konverzace označené hvězdičkou
+            </p>
+           </div>
+           <div class="hidden list-group" data-region="content-container">
+           </div>
+           <div class="list-group" data-region="placeholder-container">
+            <div class="text-center py-2">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </div>
+           </div>
+           <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </div>
+          </div>
+         </div>
+         <div class="section border-0 card rounded-0" data-region="view-overview-group-messages">
+          <div class="card-header rounded-0" data-region="toggle" id="view-overview-group-messages-toggle">
+           <button aria-controls="view-overview-group-messages-target-695c0b02420bc695c0b023d14156" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-group-messages-target-695c0b02420bc695c0b023d14156" data-toggle="collapse">
+            <span class="collapsed-icon-container">
+             <span class="dir-rtl-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+             <span class="dir-ltr-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+            </span>
+            <span class="expanded-icon-container">
+             <i aria-hidden="true" class="afaicon fas fa-caret-down fa-fw">
+             </i>
+            </span>
+            <span class="font-weight-bold ms-1">
+             Skupina
+            </span>
+            <small aria-labelledby="view-overview-group-messages-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+             (
+             <span aria-hidden="true" data-region="section-total-count">
+             </span>
+             )
+             <span class="sr-only" id="view-overview-group-messages-total-count-label">
+              Celkový počet konverzací:
+             </span>
+            </small>
+            <span class="hidden ms-2" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+            <span aria-labelledby="view-overview-group-messages-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+             <span aria-hidden="true" data-region="section-unread-count">
+             </span>
+             <span class="sr-only" id="view-overview-group-messages-unread-count-label">
+              Počet nepřečtených konverzací:
+             </span>
+            </span>
+           </button>
+          </div>
+          <div aria-labelledby="view-overview-group-messages-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-695c0b02420bc695c0b023d14156" data-region="lazy-load-list" data-user-id="106032" id="view-overview-group-messages-target-695c0b02420bc695c0b023d14156">
+           <div class="hidden text-center p-2" data-region="empty-message-container">
+            <p class="text-muted mt-2">
+             Žádné skupinové konverzace
+            </p>
+           </div>
+           <div class="hidden list-group" data-region="content-container">
+           </div>
+           <div class="list-group" data-region="placeholder-container">
+            <div class="text-center py-2">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </div>
+           </div>
+           <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </div>
+          </div>
+         </div>
+         <div class="section border-0 card rounded-0" data-region="view-overview-messages">
+          <div class="card-header rounded-0" data-region="toggle" id="view-overview-messages-toggle">
+           <button aria-controls="view-overview-messages-target-695c0b02420bc695c0b023d14156" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-messages-target-695c0b02420bc695c0b023d14156" data-toggle="collapse">
+            <span class="collapsed-icon-container">
+             <span class="dir-rtl-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+             <span class="dir-ltr-hide">
+              <i aria-hidden="true" class="afaicon fas fa-plus-square fa-fw">
+              </i>
+             </span>
+            </span>
+            <span class="expanded-icon-container">
+             <i aria-hidden="true" class="afaicon fas fa-caret-down fa-fw">
+             </i>
+            </span>
+            <span class="font-weight-bold ms-1">
+             Soukromé
+            </span>
+            <small aria-labelledby="view-overview-messages-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+             (
+             <span aria-hidden="true" data-region="section-total-count">
+             </span>
+             )
+             <span class="sr-only" id="view-overview-messages-total-count-label">
+              Celkový počet konverzací:
+             </span>
+            </small>
+            <span class="hidden ms-2" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+            <span aria-labelledby="view-overview-messages-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+             <span aria-hidden="true" data-region="section-unread-count">
+             </span>
+             <span class="sr-only" id="view-overview-messages-unread-count-label">
+              Počet nepřečtených konverzací:
+             </span>
+            </span>
+           </button>
+          </div>
+          <div aria-labelledby="view-overview-messages-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-695c0b02420bc695c0b023d14156" data-region="lazy-load-list" data-user-id="106032" id="view-overview-messages-target-695c0b02420bc695c0b023d14156">
+           <div class="hidden text-center p-2" data-region="empty-message-container">
+            <p class="text-muted mt-2">
+             Žádné soukromé konverzace
+            </p>
+           </div>
+           <div class="hidden list-group" data-region="content-container">
+           </div>
+           <div class="list-group" data-region="placeholder-container">
+            <div class="text-center py-2">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </div>
+           </div>
+           <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-hidden="true" class="h-100 hidden" data-messages-offset="0" data-region="view-search" data-user-id="106032" data-users-offset="0" style="overflow-y: auto">
+        <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+         <div class="d-flex flex-column">
+          <div class="mb-3 bg-white" data-region="all-contacts-container">
+           <div class="pt-2" data-region="contacts-container">
+            <h3 class="h6 px-2">
+             Kontakty
+            </h3>
+            <div class="list-group" data-region="list">
+            </div>
+           </div>
+           <div class="pt-2 border-top" data-region="non-contacts-container">
+            <h3 class="h6 px-2">
+             Zablokovat zprávy
+            </h3>
+            <div class="list-group" data-region="list">
+            </div>
+           </div>
+           <div class="text-end">
+            <button class="btn btn-link text-primary" data-action="load-more-users">
+             <span data-region="button-text">
+              Načíst další
+             </span>
+             <span class="hidden" data-region="loading-icon-container">
+              <span class="loading-icon icon-no-margin">
+               <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+               </i>
+              </span>
+             </span>
+            </button>
+           </div>
+          </div>
+          <div class="bg-white" data-region="messages-container">
+           <h3 class="h6 px-2 pt-2">
+            Zprávy
+           </h3>
+           <div class="list-group" data-region="list">
+           </div>
+           <div class="text-end">
+            <button class="btn btn-link text-primary" data-action="load-more-messages">
+             <span data-region="button-text">
+              Načíst další
+             </span>
+             <span class="hidden" data-region="loading-icon-container">
+              <span class="loading-icon icon-no-margin">
+               <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+               </i>
+              </span>
+             </span>
+            </button>
+           </div>
+          </div>
+          <p class="hidden p-3 text-center" data-region="no-results-container">
+           Bez výsledků
+          </p>
+         </div>
+        </div>
+        <div class="hidden" data-region="loading-placeholder">
+         <div class="text-center pt-3 icon-size-4">
+          <span class="loading-icon icon-no-margin">
+           <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+           </i>
+          </span>
+         </div>
+        </div>
+        <div class="p-3 text-center" data-region="empty-message-container">
+         <p>
+          Hledání osob a zpráv
+         </p>
+        </div>
+       </div>
+       <div aria-hidden="true" class="h-100 hidden bg-white" data-region="view-settings">
+        <div class="hidden" data-region="content-container">
+         <div class="p-3" data-region="settings">
+          <h3 class="h6 font-weight-bold">
+           Soukromí
+          </h3>
+          <p>
+           Můžete omezit, kdo vám může poslat zprávu
+          </p>
+          <div class="mb-3" data-preference="blocknoncontacts">
+           <fieldset>
+            <legend class="sr-only">
+             Přijmout zprávy od:
+            </legend>
+            <div class="custom-control custom-radio mb-2">
+             <input class="custom-control-input" id="block-noncontacts-695c0b02420bc695c0b023d14156-1" name="message_blocknoncontacts" type="radio" value="1"/>
+             <label class="custom-control-label ms-2" for="block-noncontacts-695c0b02420bc695c0b023d14156-1">
+              Pouze mé kontakty
+             </label>
+            </div>
+            <div class="custom-control custom-radio mb-2">
+             <input class="custom-control-input" id="block-noncontacts-695c0b02420bc695c0b023d14156-0" name="message_blocknoncontacts" type="radio" value="0"/>
+             <label class="custom-control-label ms-2" for="block-noncontacts-695c0b02420bc695c0b023d14156-0">
+              Moje kontakty a kdokoliv v mých kurzech
+             </label>
+            </div>
+           </fieldset>
+          </div>
+          <div aria-labelledby="notification-preferences-header-695c0b02420bc695c0b023d14156" class="hidden" data-region="notification-preference-container" role="group">
+           <h3 class="mb-2 mt-4 h6 font-weight-bold" id="notification-preferences-header-695c0b02420bc695c0b023d14156">
+            Nastavení oznámení
+           </h3>
+          </div>
+          <h3 class="mb-2 mt-4 h6 font-weight-bold">
+           Obecná nastavení
+          </h3>
+          <div data-preference="entertosend">
+           <div class="custom-control custom-switch">
+            <input class="custom-control-input" id="enter-to-send-695c0b02420bc695c0b023d14156" type="checkbox"/>
+            <label class="custom-control-label" for="enter-to-send-695c0b02420bc695c0b023d14156">
+             Pro odeslání použijte klávesu enter
+            </label>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div data-region="placeholder-container">
+         <div class="d-flex flex-column p-3">
+          <div class="w-25 bg-pulse-grey h6" style="height: 18px">
+          </div>
+          <div class="w-75 bg-pulse-grey mb-4" style="height: 18px">
+          </div>
+          <div class="mb-3">
+           <div class="w-100 d-flex mb-3">
+            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+            </div>
+            <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+            </div>
+           </div>
+           <div class="w-100 d-flex mb-3">
+            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+            </div>
+            <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+            </div>
+           </div>
+           <div class="w-100 d-flex mb-3">
+            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+            </div>
+            <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+            </div>
+           </div>
+          </div>
+          <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px">
+          </div>
+          <div class="mb-4">
+           <div class="w-100 d-flex mb-2 align-items-center">
+            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+            </div>
+            <div class="bg-pulse-grey w-25 ms-2" style="height: 18px">
+            </div>
+           </div>
+           <div class="w-100 d-flex mb-2 align-items-center">
+            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+            </div>
+            <div class="bg-pulse-grey w-25 ms-2" style="height: 18px">
+            </div>
+           </div>
+          </div>
+          <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px">
+          </div>
+          <div class="mb-3">
+           <div class="w-100 d-flex mb-2 align-items-center">
+            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+            </div>
+            <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer-container position-relative" data-region="footer-container">
+       <div aria-hidden="true" class="hidden border-top bg-white position-relative" data-enter-to-send="0" data-region="view-conversation">
+        <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+         <div aria-hidden="true" aria-live="polite" class="emoji-auto-complete-container w-100 hidden" data-region="emoji-auto-complete-container">
+         </div>
+         <div class="d-flex mt-sm-1">
+          <textarea aria-label="Napsat zprávu ..." class="form-control bg-light" data-auto-rows="" data-max-rows="5" data-min-rows="3" data-region="send-message-txt" dir="auto" maxlength="4096" placeholder="Napsat zprávu ..." rows="3" style="resize: none"></textarea>
+          <div class="position-relative d-flex flex-column">
+           <div aria-hidden="true" class="emoji-picker-container hidden" data-region="emoji-picker-container">
+            <div class="card shadow emoji-picker" data-region="emoji-picker">
+             <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0 selected" data-action="show-category" data-category="Recent" title="Nedávný">
+               <i aria-hidden="true" class="afaicon far fa-clock fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Smileys &amp; Emotion" title="Smajlíci a emoce">
+               <i aria-hidden="true" class="afaicon far fa-smile fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="People &amp; Body" title="Lidé a tělo">
+               <i aria-hidden="true" class="afaicon fas fa-restroom fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Animals &amp; Nature" title="Zvířata &amp; příroda">
+               <i aria-hidden="true" class="afaicon fas fa-leaf fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Food &amp; Drink" title="Jídlo &amp; pití">
+               <i aria-hidden="true" class="afaicon fas fa-utensils fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Travel &amp; Places" title="Cestování &amp; místa">
+               <i aria-hidden="true" class="afaicon fas fa-plane fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Activities" title="Činnosti">
+               <i aria-hidden="true" class="afaicon far fa-futbol fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Objects" title="Objekty">
+               <i aria-hidden="true" class="afaicon far fa-lightbulb fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Symbols" title="Symboly">
+               <i aria-hidden="true" class="afaicon fas fa-heart fa-fw">
+               </i>
+              </button>
+              <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Flags" title="Vlajky">
+               <i aria-hidden="true" class="afaicon fas fa-flag fa-fw">
+               </i>
+              </button>
+             </div>
+             <div class="card-body p-2 d-flex flex-column overflow-hidden">
+              <div class="input-group mb-1 flex-shrink-0">
+               <div class="input-group-prepend">
+                <span class="input-group-text pe-0 bg-white text-muted">
+                 <i aria-hidden="true" class="afaicon fas fa-search fa-fw">
+                 </i>
+                </span>
+               </div>
+               <input aria-label="Hledat" class="form-control border-start-0" data-region="search-input" placeholder="Hledat" type="text"/>
+              </div>
+              <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+               <div class="position-relative" data-region="row-container">
+               </div>
+              </div>
+              <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+               <div class="position-relative" data-region="row-container">
+               </div>
+              </div>
+             </div>
+             <div class="card-footer d-flex flex-shrink-0" data-region="footer">
+              <div class="emoji-preview" data-region="emoji-preview">
+              </div>
+              <div class="emoji-short-name text-muted text-wrap ms-2" data-region="emoji-short-name">
+              </div>
+             </div>
+            </div>
+           </div>
+           <button aria-label="Přepnout výběr emodži" class="btn btn-link btn-icon icon-size-3 ms-1" data-action="toggle-emoji-picker">
+            <i aria-hidden="true" class="afaicon far fa-smile fa-fw">
+            </i>
+           </button>
+           <button aria-label="Poslat zprávu" class="btn btn-link btn-icon icon-size-3 ms-1 mt-auto" data-action="send-message">
+            <span data-region="send-icon-container">
+             <i aria-hidden="true" class="afaicon fas fa-paper-plane fa-fw">
+             </i>
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+              </i>
+             </span>
+            </span>
+           </button>
+          </div>
+         </div>
+        </div>
+        <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+         <div class="d-flex p-3 justify-content-end">
+          <button class="btn btn-link btn-icon my-1 icon-size-4" data-action="delete-selected-messages" data-placement="top" data-toggle="tooltip" title="Odstranit vybrané zprávy">
+           <span data-region="icon-container">
+            <i aria-hidden="true" class="afaicon fas fa-trash fa-fw">
+            </i>
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </span>
+           <span class="sr-only">
+            Odstranit vybrané zprávy
+           </span>
+          </button>
+         </div>
+        </div>
+        <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+         <div class="p-3 bg-white">
+          <p data-region="title">
+          </p>
+          <p class="text-muted" data-region="text">
+          </p>
+          <button class="btn btn-primary btn-block" data-action="request-add-contact" type="button">
+           <span data-region="dialogue-button-text">
+            Odeslat žádost o kontakt
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+        <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+         <div class="p-3 bg-white">
+          <p class="text-muted" data-region="text">
+           Tohoto uživatele jste zablokovali.
+          </p>
+          <button class="btn btn-primary btn-block" data-action="request-unblock" type="button">
+           <span data-region="dialogue-button-text">
+            Odblokovat uživatele
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Nahrávání" class="afaicon fas fa-circle-notch fa-spin fa-fw" role="img" title="Nahrávání">
+             </i>
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+        <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+         <div class="p-3 bg-white">
+          <p class="text-muted" data-region="text">
+           Tomuto uživateli nemůžete odeslat zprávu
+          </p>
+         </div>
+        </div>
+        <div class="p-sm-2" data-region="placeholder-container">
+         <div class="d-flex">
+          <div class="bg-pulse-grey w-100" style="height: 80px">
+          </div>
+          <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px">
+          </div>
+         </div>
+        </div>
+        <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);">
+        </div>
+       </div>
+       <div class="text-center" data-region="view-overview">
+        <a href="https://moodle.czu.cz/message/index.php">
+         Zobrazit vše
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="d-none d-sm-block" id="page-footer">
+     <div class="container">
+      <div class="row">
+      </div>
+     </div>
+     <div class="info container2 clearfix">
+      <div class="container">
+       <div class="row">
+        <div class="tool_usertours-resettourcontainer">
+        </div>
+        <div class="col-md-4 my-md-0 my-2 helplink">
+        </div>
+        <div class="col-md-4 my-md-0 my-2">
+         <div class="tool_dataprivacy">
+          <a href="https://moodle.czu.cz/admin/tool/dataprivacy/summary.php">
+           Souhrn uchovávaných dat
+          </a>
+         </div>
+         <div>
+          <a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100706.13&amp;lang=cs&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">
+           Stáhněte si mobilní aplikaci
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-12 my-md-0 my-2">
+        </div>
+       </div>
+      </div>
+     </div>
+    </footer>
+    <div id="back-to-top">
+     <i class="fa fa-angle-up">
+     </i>
+    </div>
+   </div>
+  </div>
+  <script>
+   //<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.czu.cz/lib/requirejs.php/1765212079/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.czu.cz/lib/javascript.php/1765212079/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://moodle.czu.cz/lib/javascript.php/1765212079/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://moodle.czu.cz/lib/javascript.php/1765212079/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+  </script>
+  <script src="https://moodle.czu.cz/lib/javascript.php/1765212079/lib/requirejs/require.min.js">
+  </script>
+  <script>
+   //<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"cs"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('cs');
+});;
+M.util.js_pending('filter_glossary/autolinker'); require(['filter_glossary/autolinker'], function(amd) {amd.init(); M.util.js_complete('filter_glossary/autolinker');});;
+M.util.js_pending('theme_adaptable/adaptable'); require(['theme_adaptable/adaptable'], function(amd) {amd.init({"rtl":false,"stickynavbar":true}); M.util.js_complete('theme_adaptable/adaptable');});;
+M.util.js_pending('theme_adaptable/pace_init'); require(['theme_adaptable/pace_init'], function(amd) {amd.init("minimal"); M.util.js_complete('theme_adaptable/pace_init');});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("21", null); M.util.js_complete('block_settings/settingsblock');});;
+M.util.js_pending('block_navigation/navblock'); require(['block_navigation/navblock'], function(amd) {amd.init("20"); M.util.js_complete('block_navigation/navblock');});;
+M.util.js_pending('theme_adaptable/collapseblock'); require(['theme_adaptable/collapseblock'], function(amd) {amd.collapseBlockInit(); M.util.js_complete('theme_adaptable/collapseblock');});;
+M.util.js_pending('theme_adaptable/collapseblock'); require(['theme_adaptable/collapseblock'], function(amd) {amd.collapseBlockInit(); M.util.js_complete('theme_adaptable/collapseblock');});;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    var uniqid = "695c0b023f71c695c0b023d14151";
+    var container = $('#searchinput-navbar-' + uniqid);
+    var opensearch = container.find('[data-action="opensearch"]');
+    var input = container.find('[data-region="input"]');
+    var submit = container.find('[data-action="submit"]');
+
+    submit.on('click', function(e) {
+        if (input.val() === '') {
+            e.preventDefault();
+        }
+    });
+    container.on('hidden.bs.collapse', function() {
+        opensearch.removeClass('d-none');
+        input.val('');
+    });
+    container.on('show.bs.collapse', function() {
+        opensearch.addClass('d-none');
+    });
+    container.on('shown.bs.collapse', function() {
+        input.focus();
+    });
+});
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    var uniqid = "695c0b023f8bf695c0b023d14152";
+    var container = $('#searchinput-navbar-' + uniqid);
+    var opensearch = container.find('[data-action="opensearch"]');
+    var input = container.find('[data-region="input"]');
+    var submit = container.find('[data-action="submit"]');
+
+    submit.on('click', function(e) {
+        if (input.val() === '') {
+            e.preventDefault();
+        }
+    });
+    container.on('hidden.bs.collapse', function() {
+        opensearch.removeClass('d-none');
+        input.val('');
+    });
+    container.on('show.bs.collapse', function() {
+        opensearch.addClass('d-none');
+    });
+    container.on('shown.bs.collapse', function() {
+        input.focus();
+    });
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, Controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new Controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-695c0b02406d7695c0b023d14154');
+    Popover.init(toggle);
+});
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+M.util.js_pending('core_courseformat/local/content/activity_header'); require(['core_courseformat/local/content/activity_header'], function(amd) {amd.init(); M.util.js_complete('core_courseformat/local/content/activity_header');});;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if ($(this).val()) {
+                    $('#url_select_f695c0b023d14155').submit();
+                }
+            });
+        });
+    ;
+
+require(['theme_adaptable/activity_navigation'], function(component) {
+    component.init('adaptable-activity-navigation');
+});
+;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-695c0b02420bc695c0b023d14156');
+    MessageDrawer.init(root, '695c0b02420bc695c0b023d14156', false);
+});
+;
+
+    M.util.js_pending('theme_boost/loader');
+    require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+        Drawer.init();
+        M.util.js_complete('theme_boost/loader');
+    });
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1169849, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1767639808); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?delayStartupUntil=configured">
+  </script>
+  <script>
+   //<![CDATA[
+M.str = {"moodle":{"lastmodified":"Naposledy zm\u011bn\u011bno","name":"N\u00e1zev","error":"Chyba","info":"Informace","yes":"Ano","no":"Ne","viewallcourses":"Zobrazit v\u0161echny kurzy","cancel":"Zru\u0161it","confirm":"Potvrdit","areyousure":"Opravdu?","closebuttontitle":"Zav\u0159\u00edt","unknownerror":"Nezn\u00e1m\u00e1 chyba","file":"Soubor","url":"URL","collapseall":"Sbalit v\u0161e","expandall":"Rozbalit v\u0161e"},"repository":{"type":"Typ","size":"Velikost","invalidjson":"Neplatn\u00fd \u0159et\u011bzec JSON","nofilesattached":"\u017d\u00e1dn\u00e9 p\u0159ilo\u017een\u00e9 soubory","filepicker":"V\u00fdb\u011br souboru","logout":"Odhl\u00e1sit se","nofilesavailable":"\u017d\u00e1dn\u00e9 soubory nejsou dostupn\u00e9","norepositoriesavailable":"Litujeme, ale \u017e\u00e1dn\u00fd z va\u0161ich sou\u010dasn\u00fdch repozit\u00e1\u0159\u016f nem\u016f\u017ee vr\u00e1tit soubory v po\u017eadovan\u00e9m form\u00e1tu.","fileexistsdialogheader":"Soubor existuje","fileexistsdialog_editor":"Soubor s t\u00edmto jm\u00e9nem byl ji\u017e p\u0159ipojen k textu, kter\u00fd upravujete.","fileexistsdialog_filemanager":"Soubor s t\u00edmto jm\u00e9nem byl ji\u017e p\u0159ipojen","renameto":"P\u0159ejmenovat na \"{$a}\"","referencesexist":"Existuje {$a}  odkaz\u016f na tento soubor","select":"Vybrat"},"admin":{"confirmdeletecomments":"Opravdu odstranit vybran\u00e9 koment\u00e1\u0159e?","confirmation":"Potvrzen\u00ed"},"debug":{"debuginfo":"Informace o lad\u011bn\u00ed","line":"\u0158\u00e1dek","stacktrace":"Z\u00e1sobn\u00edk trasov\u00e1n\u00ed"},"langconfig":{"labelsep":": "}};
+//]]>
+  </script>
+  <script>
+   //<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random695c0b023d14157'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random695c0b023d14157'); });
+})();
+//]]>
+  </script>
+ </body>
+</html>
+
