@@ -22,7 +22,7 @@ Automated Python bot to monitor CZU Moodle Test Centrum (TC) pages for available
 ### 1. Clone and Install Dependencies
 
 ```bash
-cd /Users/alexandervedernikov/Documents/Personal/moodle-scrape
+cd /moodle-scrape
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
