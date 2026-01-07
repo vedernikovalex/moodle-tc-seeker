@@ -144,47 +144,6 @@ tail -f logs/tc_bot_$(date +%Y-%m-%d).log
 - Check credentials are correct
 - Review session timeout settings
 
-## Deployment Options
-
-### Local Machine (Background)
-```bash
-nohup python main.py &
-```
-
-### systemd Service (Linux)
-Create `/etc/systemd/system/moodle-tc-bot.service`:
-```ini
-[Unit]
-Description=Moodle TC Booking Bot
-After=network.target
-
-[Service]
-Type=simple
-User=your_user
-WorkingDirectory=/path/to/moodle-scrape
-Environment="PATH=/path/to/moodle-scrape/venv/bin"
-ExecStart=/path/to/moodle-scrape/venv/bin/python main.py
-Restart=always
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
-```
-
-Enable and start:
-```bash
-sudo systemctl enable moodle-tc-bot
-sudo systemctl start moodle-tc-bot
-sudo systemctl status moodle-tc-bot
-```
-
-### Docker
-Build and run:
-```bash
-docker build -t moodle-tc-bot .
-docker run -d --name tc-bot --env-file .env -v $(pwd)/logs:/app/logs moodle-tc-bot
-```
-
 ## Security Best Practices
 
 1. Never commit `.env` file
