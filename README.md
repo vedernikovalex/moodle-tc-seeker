@@ -78,35 +78,6 @@ tc_pages:
 2. Navigate to your course's Test Centrum page
 3. Copy the URL (should contain `/mod/tcb/view.php?id=XXXXXX`)
 
-### 5. IMPORTANT: Complete TC Parser Implementation
-
-Before running the bot, you must complete the TC page parser implementation:
-
-1. **Test authentication:**
-   ```bash
-   python -c "from src.auth.moodle_auth import MoodleAuthenticator; from dotenv import load_dotenv; import os; load_dotenv(); auth = MoodleAuthenticator('https://moodle.czu.cz'); auth.login(os.getenv('MOODLE_USERNAME'), os.getenv('MOODLE_PASSWORD')); print('Auth successful!' if auth.is_authenticated() else 'Auth failed')"
-   ```
-
-2. **Fetch TC page HTML:**
-   ```bash
-   python -c "from src.auth.moodle_auth import MoodleAuthenticator; from src.scraper.tc_parser import TCPageParser; from dotenv import load_dotenv; import os; load_dotenv(); auth = MoodleAuthenticator('https://moodle.czu.cz'); auth.login(os.getenv('MOODLE_USERNAME'), os.getenv('MOODLE_PASSWORD')); parser = TCPageParser(auth.session); soup = parser.fetch_tc_page('https://moodle.czu.cz/mod/tcb/view.php?id=776603'); print(soup.prettify())" > tc_page.html
-   ```
-
-3. **Inspect `tc_page.html`** to understand:
-   - How available slots are displayed
-   - How to extract slot date/time/ID
-   - How booking forms are structured
-   - How to detect existing bookings
-
-4. **Update these methods in `src/scraper/tc_parser.py`:**
-   - `get_available_slots()` - Parse slot data from HTML
-   - `is_already_booked()` - Detect existing bookings
-   - `extract_booking_form_data()` - Extract form fields
-
-5. **Update `src/booking/auto_booker.py`:**
-   - `book_slot()` - Submit booking form
-   - `verify_booking()` - Verify success
-
 ## Running the Bot
 
 ```bash
